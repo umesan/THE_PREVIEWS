@@ -1,6 +1,3 @@
-the_previews
-============
-
 # THE PREVIEWS
 
 ## これは何？
