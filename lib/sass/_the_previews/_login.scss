@@ -1,0 +1,108 @@
+@charset "utf-8";
+// ======================================================================
+
+// Login Module
+// 
+// Styleguide 11
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Login Module
+//
+// Markup:
+// <div class="m-loginform">
+// 	<form id="loginForm" name="loginForm" action="" method="POST">
+// 			<p class="loginform__tit">ログインして管理画面に移動します。</p>
+// 			<div class="alert--error pa10 mb10">エラー文言を表示</div>
+// 			<div class="loginform__body">
+// 				<div class="m-lock mrla">
+// 					<i class="fa fa-4x fa-lock"></i>
+// 				</div>
+// 				<p class="lockform__lead">ようこそゲストさん</p>
+// 				<div class="loginform__box">
+// 					<label for="userid">ユーザ名</label><br>
+// 					<input type="text" id="userid" name="userid" value="">
+// 				</div>
+// 				<div class="loginform__box">
+// 					<label for="password">パスワード</label><br>
+// 					<input type="password" id="password" name="password" value="">
+// 				</div>
+// 				<div class="loginform__btn">
+// 					<input type="submit" id="login" class="m-btn01 btn01--entry" name="login" value="ログイン">
+// 				</div>
+// 			</div>
+// 	</form>
+// 	<div class="loginform__foot">
+// 		<a href="./"><i class="fa fa-home"></i> TOPへ戻る</a>
+// 	</div>
+// </div>
+//
+// Styleguide 11.1
+
+//-----------------------------------------------------------------------
+
+$m-loginform: false !default;
+@mixin m-loginform() {
+	@if $m-loginform {}
+	@else {
+		$m-loginform: true;
+
+.m-loginform{
+	width: 100%;
+	max-width: 360px;
+	margin: 0 auto;
+
+	.loginform__tit{
+		font-size: 18px;
+		text-align: center;
+		padding: 20px 0;
+		color: #666;
+	}
+	.loginform__body{
+		padding: 40px;
+		font-weight: normal;
+		background: #fff;
+		border: 1px solid #e5e5e5;
+		@include box-shadow(0 4px 10px -1px rgba(200,200,200,.7));
+		@include border-radius(4px);
+	}
+
+	.lockform__lead{
+		padding: 10px 0;
+		text-align: center;
+	}
+
+	.loginform__box{
+		padding: 5px 0;
+	}
+
+	.loginform__box label{
+		font-size: 16px;
+	}
+
+	.loginform__box input{
+		width: 100%;
+		padding: 8px;
+		font-size: 16px;
+		border: 1px solid #ccc;
+		@include border-radius(2px);
+		@include box-sizing(border-box);
+	}
+
+	.loginform__btn{
+		padding-top: 10px;
+		text-align: center;
+	}
+
+	.loginform__foot{
+		padding: 20px 10px 0;
+		text-align: center;
+	}
+
+}
+
+
+	}
+}

@@ -1,0 +1,572 @@
+@charset "utf-8";
+// ======================================================================
+
+// Btn Module
+// 
+// Styleguide 2
+
+// ======================================================================
+
+
+//-----------------------------------------------------------------------
+
+// ボタン01
+// 
+// ボタンのモジュール01  
+// 主に下記の場所で使用
+// 
+// * .header__sort
+//
+// Markup:
+// <a href="#" class="m-btn01 {$modifiers}">a ボタン</a>
+// <p class="m-btn01 {$modifiers}">p ボタン</p>
+// <span class="m-btn01 {$modifiers}">span ボタン</span>
+// <input type="submit" class="m-btn01 {$modifiers}" value="input ボタン">
+// <button type="submit" class="m-btn01 {$modifiers}">button ボタン</button>
+// 
+// btn01--delete - 削除ボタン
+// btn01--entry - 投稿
+// btn01--icn-thumb - サムネ小
+// btn01--icn-thumb-l - サムネ大
+// btn01--icn-list - リスト小
+// btn01--icn-list-l - リスト大
+// btn01--w1 -  
+//
+// Styleguide 2.1
+
+//-----------------------------------------------------------------------
+$m-btn01: false !default;
+@mixin m-btn01() {
+	@if $m-btn01 {}
+	@else {
+		$m-btn01: true;
+
+.m-btn01{
+	@include box-sizing(border-box);
+	@include box-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+	display: inline-block;
+	width: 140px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+
+	border: 1px solid rgba(0,0,0,0.1);
+	background-color: #fff;
+
+	color: #444;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: top;
+	line-height: 30px;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+
+	&:hover{
+		color: #555;
+		background-color: #f5f5f5;
+	}
+	&:active{
+		color: #444;
+	}
+	&:visited{
+		color: #444;
+	}
+}
+
+.btn01--delete{
+	@include box-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+	border: 1px solid #D14836;
+	background-color: #D14836;
+	background-image: -webkit-linear-gradient(top,#DD4B39,#D14836);
+	background-image: linear-gradient(top,#dd4b39,#d14836);
+	color: #fff;
+	&:hover{
+		color: #fff;
+		background-image: none;
+		background-color: #c53727;
+	}
+	&:active{
+		color: #fff;
+	}
+	&:visited{
+		color: #fff;
+	}
+}
+.btn01--entry{
+	border: 1px solid rgba(0,0,0,0.1);
+	background-color: #333;
+	color: #ffffff;
+	@include box-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+	&:hover{
+		color: #fff;
+		background: #000;
+	}
+	&:active{
+		color: #fff;
+	}
+	&:visited{
+		color: #fff;
+	}
+}
+
+.btn01--icn-thumb{
+	background-image: url(../img/icn_thumb.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: 16px 16px;
+	-moz-background-size: 16px 16px;
+	background-size: 16px 16px;
+	@include img-replacement();
+}
+
+.btn01--icn-thumb-l{
+	background-image: url(../img/icn_thumb_l.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: 16px 16px;
+	-moz-background-size: 16px 16px;
+	background-size: 16px 16px;
+	@include img-replacement();
+}
+
+.btn01--icn-list{
+	background-image: url(../img/icn_list.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: 16px 16px;
+	-moz-background-size: 16px 16px;
+	background-size: 16px 16px;
+	@include img-replacement();
+}
+
+.btn01--icn-list-l{
+	background-image: url(../img/icn_list_l.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: 16px 16px;
+	-moz-background-size: 16px 16px;
+	background-size: 16px 16px;
+	@include img-replacement();
+}
+
+.btn01--icn-preview{
+	background-color: #fff;
+	background-image: url(../img/icn_preview.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-background-size: 16px 16px;
+	-moz-background-size: 16px 16px;
+	background-size: 16px 16px;
+	@include img-replacement();
+}
+
+.view{
+	float: left;
+	border-right: none;
+	width: 56px;
+}
+.del{
+	float: left;
+	width: 56px;
+}
+
+.btn01--w1{
+	width: 100%;
+}
+.btn01--w2{
+	width: 50%;
+}
+
+.view-now .m-btn01.act{
+	border-bottom: 1px solid #fff;
+	@include box-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		background-color: #fff;
+		width: 100%;
+		height: 2px;
+	}
+}
+
+	}
+}
+
+
+//-----------------------------------------------------------------------
+
+// ボタンセット
+// 
+// ボタンをまとめたモジュール
+// 主に下記の場所で使用
+// 
+// * .m-menu
+//
+// Markup:
+// <ul class="m-btn-set o-cfx">
+// <li class="btn-set-item"><a class="m-btn01 btn01--icn-thumb"></a></li>
+// <li class="btn-set-item"><a class="m-btn01 btn01--icn-thumb-l"></a></li>
+// <li class="btn-set-item"><a class="m-btn01 btn01--icn-list"></a></li>
+// <li class="btn-set-item"><a class="m-btn01 btn01--icn-list-l"></a></li>
+// </ul>
+//
+// Styleguide 2.2
+
+//-----------------------------------------------------------------------
+
+$m-btn-set: false !default;
+@mixin m-btn-set() {
+	@if $m-btn-set {}
+	@else {
+		$m-btn-set: true;
+
+.m-btn-set{
+	padding: 0 10px;
+	text-align: center;
+	letter-spacing:-0.4em;
+}
+
+.btn-set-item{
+	letter-spacing:normal;
+	display:inline-block;
+	*display: inline;
+	*zoom: 1;
+
+	width: 40px;
+	height: 28px;
+	@include box-sizing(border-box);
+
+	background-color: #fff;
+
+	& .m-btn01{
+		width: 100%;
+		border-right: none;
+	}
+	&:last-child .m-btn01{
+		border-right: 1px solid rgba(0,0,0,0.1);
+	}
+
+}
+
+.btn-set-item .m-btn01.act{
+	cursor: default;
+	background-color: #ccc;
+	color: #333;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+	}
+}
+
+
+
+
+
+//-----------------------------------------------------------------------
+
+// ボタン 02
+// 
+// ボタンのモジュール02  
+// 主に下記の場所で使用
+// 
+// * .m-menu
+//
+// Markup:
+// <a href="#" class="m-btn02 {$modifiers}">a ボタン</a>
+// <p class="m-btn02 {$modifiers}">p ボタン</p>
+// <span class="m-btn02 {$modifiers}">span ボタン</span>
+// <input type="submit" class="m-btn02 {$modifiers}" value="input ボタン">
+// <button type="submit" class="m-btn02 {$modifiers}">button ボタン</button>
+// 
+// btn02--upload - 投稿ボタン
+// btn02--back - 戻るボタン
+//
+// Styleguide 2.3
+
+//-----------------------------------------------------------------------
+
+$m-btn02: false !default;
+@mixin m-btn02() {
+	@if $m-btn02 {}
+	@else {
+		$m-btn02: true;
+
+.m-btn02{
+	display: inline-block;
+	padding: 10px 5px;
+	min-height: 37px;
+	width: 160px;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-size: 12px;
+	vertical-align: top;
+	line-height: 37px;
+
+	@include border-radius(2px);
+	@include box-sizing(border-box);
+
+	-webkit-transition: all .218s;
+	transition: all .218s;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.2);
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+
+	color: #666;
+	cursor: pointer;
+
+	&:hover{
+		color: #666;
+		background-color: #f5f5f5;
+		text-decoration: none;
+	}
+
+	&:active{
+		color: #666;
+		text-decoration: none;
+	}
+	&:visited{
+		color: #666;
+		text-decoration: none;
+	}
+}
+
+.btn02--upload{
+	background-color: #D14836;
+	background-image: -webkit-linear-gradient(top,#DD4B39,#D14836);
+	background-image: linear-gradient(top,#dd4b39,#d14836);
+	color: #fff;
+
+	&:hover{
+		color: #fff;
+		background-image: none;
+		background-color: #c53727;
+	}
+	&:active{
+		color: #fff;
+	}
+	&:visited{
+		color: #fff;
+	}
+}
+
+.btn02--back{
+	@include background-size(15px 15px);
+	background-color:#ffffff;
+	color: #444;
+	&:hover{
+		color: #444;
+	}
+	&:active{
+		color: #444;
+	}
+	&:visited{
+		color: #444;
+	}
+}
+
+	}
+}
+
+
+
+
+
+//-----------------------------------------------------------------------
+
+// ボタン 03
+// 
+// ボタンのモジュール03  
+// 主に下記の場所で使用
+//
+// Markup:
+// <a href="#" class="m-btn03 {$modifiers}">a ボタン</a>
+// <p class="m-btn03 {$modifiers}">p ボタン</p>
+// <span class="m-btn03 {$modifiers}">span ボタン</span>
+// <input type="submit" class="m-btn03 {$modifiers}" value="input ボタン">
+// <button type="submit" class="m-btn03 {$modifiers}">button ボタン</button>
+//
+// btn03--delete - 投稿ボタン
+// btn03--entry - 戻るボタン
+//
+// Styleguide 2.4
+
+//-----------------------------------------------------------------------
+
+$m-btn03: false !default;
+@mixin m-btn03() {
+	@if $m-btn03 {}
+	@else {
+		$m-btn03: true;
+
+.m-btn03{
+	display: inline-block;
+	width: 140px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-size: 12px;
+	vertical-align: top;
+
+	color: #555;
+	text-align: center;
+	line-height: 40px;
+	text-decoration: none;
+
+	cursor: pointer;
+	@include box-sizing(border-box);
+
+	border: 1px solid rgba(0,0,0,0.1);
+	background-color: #fff;
+	
+	@include box-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+	&:hover{
+		color: #555;
+		background-color: #f5f5f5;
+	}
+	&:active{
+		color: #444;
+	}
+	&:visited{
+		color: #444;
+	}
+}
+
+.btn03--delete{
+	background-color: #D14836;
+	background-image: -webkit-linear-gradient(top,#DD4B39,#D14836);
+	background-image: linear-gradient(top,#dd4b39,#d14836);
+	@include box-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+	color: #fff;
+	border: 1px solid #D14836;
+
+	&:hover{
+		color: #fff;
+		background-image: none;
+		background-color: #c53727;
+	}
+	&:active{
+		color: #fff;
+	}
+	&:visited{
+		color: #fff;
+	}
+}
+.btn03--entry{
+	border: 1px solid rgba(0,0,0,0.1);
+	background-color: #333;
+	color: #ffffff;
+	@include box-shadow(0 0 1px rgba(0, 0, 0, 0.2));
+	&:hover{
+		color: #fff;
+		background: #000;
+	}
+	&:active{
+		color: #fff;
+	}
+	&:visited{
+		color: #fff;
+	}
+}
+
+
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------------
+
+// ボタン 04
+//
+// ボタンのモジュール04
+// 管理画面「カテゴリを追加する」ボタン
+//
+// Markup:
+// <a href="#" class="m-btn04">a ボタン</a>
+// <p class="m-btn04">p ボタン</p>
+// <span class="m-btn04">span ボタン</span>
+// <input type="submit" class="m-btn04" value="input ボタン">
+// <button type="submit" class="m-btn04">button ボタン</button>
+//
+// Styleguide 2.5
+
+//-----------------------------------------------------------------------
+
+$m-btn04: false !default;
+@mixin m-btn04() {
+	@if $m-btn04 {}
+	@else {
+		$m-btn04: true;
+
+.m-btn04{
+	display: block;
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 50px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #222932;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	@include box-sizing(border-box);
+}
+
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------------
+
+// ページナビゲーションボタン
+//
+// ページナビゲーション用ボタン
+//
+// Markup:
+// <p class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-left"></i></p>
+// <p class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-right"></i></p>
+// <a href="#" class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-left"></i></a>
+// <a href="#" class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-right"></i></a>
+//
+// Styleguide 2.6
+
+//-----------------------------------------------------------------------
+
+
+$m-btn__pagenav: false !default;
+@mixin m-btn__pagenav() {
+	@if $m-btn__pagenav {}
+	@else {
+		$m-btn__pagenav: true;
+
+.m-btn__pagenav{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background: rgba(0,0,0,0.8) no-repeat 50% 50%;
+	color: #fff;
+	line-height: 130px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+	}
+}

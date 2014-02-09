@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*----------------------------------------
+	clearfix
+----------------------------------------*/
+.o-cfx:after {
+	content:" ";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}
+
+/*----------------------------------------
+	display: none;
+----------------------------------------*/
+.o-hide{
+	display: none !important;
+}
+
+/*----------------------------------------
+	display: block;
+----------------------------------------*/
+.o-show{
+	display: block !important;
+}

@@ -1,0 +1,717 @@
+@charset "utf-8";
+// ======================================================================
+
+// Vis List Module
+// 
+// Styleguide 8
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Vis List Module
+// 
+// 画像リスト（サムネイル小） モジュール
+//
+// Markup:
+// <ul class="m-imglist o-show o-cfx">
+// 	<li class="imglist__item o-cfx" data-itemid="xxxxxx">
+// 		<p class="imglist__ckbox"><input type="checkbox" name="deletefile[]" value=""></p>
+// 		<p class="imglist__vis"><a href="#" target="_blank"><img src="http://dummyimage.com/142x100"></a></p>
+// 		<div class="imglist__txt">
+// 			<p class="imglist__date"><i class="fa fa-calendar-o"></i> xx年xx月xx日</p>
+// 			<p class="imglist__tit">
+// 				<span class="imglist__filename">xxxxxx.jpg</span>
+// 			</p>
+// 		</div>
+// 		<div class="imglist__status m-status">
+// 			<p id="status_short-txt_xxxxxx" class="status__short-txt">XXXXXXXXXX</p>
+// 			<div class="status__frm">
+// 				<div class="status__txt">
+// 					<div id="status_xxxxxx" class="status__textarea">XXXXXXXXXX</div>
+// 				</div>
+// 			</div>
+// 		</div>
+// 	</li>
+// </ul>
+//
+// Styleguide 8.1
+
+//-----------------------------------------------------------------------
+
+// Vis List Module
+// 
+// 画像リスト（リスト型） モジュール
+//
+// Markup:
+// <div class="noimg">
+// 	<ul class="m-imglist o-show o-cfx">
+// 		<li class="imglist__item o-cfx" data-itemid="xxxxxx">
+// 			<p class="imglist__ckbox"><input type="checkbox" name="deletefile[]" value=""></p>
+// 			<p class="imglist__vis"><a href="#" target="_blank"><img src="http://dummyimage.com/142x100"></a></p>
+// 			<div class="imglist__txt">
+// 				<p class="imglist__date"><i class="fa fa-calendar-o"></i> xx年xx月xx日</p>
+// 				<p class="imglist__tit">
+// 					<span class="imglist__filename">xxxxxx.jpg</span>
+// 				</p>
+// 			</div>
+// 			<div class="imglist__status m-status">
+// 				<p id="status_short-txt_xxxxxx" class="status__short-txt">XXXXXXXXXX</p>
+// 				<div class="status__frm">
+// 					<div class="status__txt">
+// 						<div id="status_xxxxxx" class="status__textarea">XXXXXXXXXX</div>
+// 					</div>
+// 				</div>
+// 			</div>
+// 		</li>
+// 	</ul>
+// </div>
+//
+// Styleguide 8.2
+
+//-----------------------------------------------------------------------
+
+
+$m-imglist: false !default;
+@mixin m-imglist() {
+	@if $m-imglist {}
+	@else {
+		$m-imglist: true;
+
+.m-imglist{
+	display: none;
+
+	border-bottom: 1px solid #EBEBEB;
+	background-color: rgba(255,255,255,0.8);
+	margin: 0;
+	padding-top: 10px;
+
+}
+
+.imglist__item{
+	position: relative;
+	float: left;
+	width: 152px;
+	margin: 0 5px;
+}
+
+	.imglist__ckbox{
+		position: absolute;
+		top: 1px;
+		left: 1px;
+		display: none;
+		z-index: 100;
+		background-color: rgba(255,255,255,1);
+		width: 24px;
+		height: 24px;
+		line-height: 20px;
+		text-align: center;
+
+		.imglist__item--hover &{
+			display: block;
+		}
+		&.imglist__ckbox--checked{
+			display: block;
+		}
+
+		.con-thumb-l &{
+			top: 184px;
+			left: 1px;
+			border: none;
+			background-color: #fff;
+			@include box-shadow(0 0 0 rgba(0,0,0,0));
+		}
+
+	}
+
+
+	.imglist__star{
+		position: absolute;
+		top: 84px;
+		right: 2px;
+		z-index: 10;
+
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+		text-align: center;
+		background: #fff;
+
+		color: #ccc;
+		cursor: pointer;
+		&.fix,
+		&.fix:hover{
+			color: #ffcc00 !important;
+		}
+
+		//  サムネイル大
+		.con-thumb-l &{
+			top: 184px;
+		}
+
+	}
+
+	// 画像
+	.imglist__vis{
+		width: 150px;
+		text-align: center;
+		margin: 0 auto 10px;
+
+		background: #eeeeee;
+		line-height: 0;
+
+		a{
+			display: block;
+			width: 142px;
+			height: 100px;
+			overflow: hidden;
+			border: 4px solid #fff;
+			@include box-shadow(0 2px 4px rgba(0,0,0,0.2));
+		}
+
+		img{
+			width: 142px;
+		}
+
+		//  サムネイル小
+		.con-thumb &{
+			height: 108px;
+		}
+
+		//  サムネイル大
+		.con-thumb-l &{
+			// display: table;
+			background-color: transparent;
+			border: none;
+			a{
+
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				border: 1px solid #ccc;
+
+				display: inline-block;
+				width: 142px;
+				height: auto;
+				max-height: 200px;
+
+				overflow: hidden;
+				border: 4px solid #fff;
+				@include box-shadow(0 2px 4px rgba(0,0,0,0.2));
+
+			}
+			img{
+				width: 148px;
+			}
+			position: relative;
+			height: 208px;
+		}
+	}
+
+	.imglist__cat{
+		width: 150px;
+		margin: 0;
+		padding: 0;
+		display: block;
+		font-size: 11px;
+		color: #999;
+		text-align: left;
+		@include ellipsis;
+
+		a{
+			font-size: 11px;
+			color: #666;
+		}
+	}
+
+	.imglist__tit{
+		width: 150px;
+		margin: 5px 0;
+		padding: 0;
+		font-size: 11px;
+		color: #666;
+		text-align: left;
+		@include ellipsis;
+	}
+
+	.imglist__date{
+		font-size: 10px;
+		i{
+			font-size: 11px;
+		}
+		color: #999;
+		@include ellipsis;
+	}
+
+	.imglist__status {
+		position: relative;
+		margin-top: 3px;
+		padding: 6px 0 5px 6px;
+		min-height: 20px;
+		border-top: 1px solid #eee;
+
+		&:after,
+		&:before {
+			bottom: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&:after {
+			border-color: rgba(255, 255, 255, 0);
+			border-bottom-color: #fff;
+			border-width: 8px;
+			margin-left: -8px;
+		}
+		&:before {
+			border-color: rgba(238, 238, 238, 0);
+			border-bottom-color: transparent;
+			border-bottom-color: #eee;
+			border-width: 9px;
+			margin-left: -9px;
+		}
+
+	}
+
+		.status__short-txt{
+			font-size: 10px;
+			color: #666;
+			width: 150px;
+			@include ellipsis;
+		}
+
+		.status__frm{
+			display: none;
+			.imglist__item--hover &{
+				display: block;
+			}
+
+			position: absolute;
+			top: -2px;
+			left: 0;
+			z-index: 1000;
+			overflow: visible;
+			height: auto;
+			width: 152px;
+			border: 1px solid #ccc;
+			background-color: #ffffff;
+			@include box-sizing(border-box);
+			@include box-shadow(0 2px 4px rgba(0,0,0,0.2));
+
+			&:after,
+			&:before {
+				bottom: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+
+			&:after {
+				border-color: rgba(255, 255, 255, 0);
+				border-bottom-color: #ffffff;
+				border-width: 8px;
+				margin-left: -8px;
+			}
+			&:before {
+				border-color: rgba(238, 238, 238, 0);
+				border-bottom-color: #ccc;
+				border-width: 9px;
+				margin-left: -9px;
+			}
+
+		}
+
+		.status__textarea{
+			font-size: 10px;
+			color: #666;
+			border: none;
+			padding: 5px 5px 0;
+			width: 100%;
+			min-height: 50px;
+			@include box-sizing(border-box);
+			outline: none;
+			resize: vertical;
+		}
+
+
+		.status__btn{
+			.status__frm:hover &{
+				display: block;
+			}
+			width: 100%;
+			display: none;
+		}
+
+		.status__btn-refresh{
+			.js-refresh &{
+				display: block;
+			}
+			display: none;
+			width: 90%;
+			color: #333;
+			border: 1px solid #999;
+			background: #ccc;
+
+			font-size: 10px;
+			margin: 0 auto 5px;
+			padding: 5px 0;
+			line-height: 1.2;
+			text-align: center;
+			@include box-sizing(border-box);
+		}
+
+		.status__btn-update{
+			.js-refresh &{
+				display: none;
+			}
+			display: block;
+			width: 90%;
+			border: 1px solid #ccc;
+			background: #eee;
+			color: #999;
+			font-size: 10px;
+			margin: 0 auto 5px;
+			padding: 5px 0;
+			line-height: 1.2;
+			text-align: center;
+			cursor: pointer;
+			&:hover{
+				color: #333;
+				border: 1px solid #999;
+				background: #ccc;
+			}
+		}
+
+		.status__editbtn{
+			position: absolute;
+			top: 5px;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			opacity: 0.3;
+			cursor: pointer;
+			background: url(../img/icn_com.png) no-repeat 50% 50%;
+			@include background-size(12px 12px);
+			@include img-replacement();
+			&:hover{
+				opacity: 1;
+			}
+		}
+
+
+
+
+
+// リスト形式
+.noimg{
+
+	.m-imglist{
+		padding: 0;
+	}
+
+	.imglist__item{
+		float: none;
+		display: table;
+		border-bottom: 1px solid #e5e5e5;
+		width: 100%;
+		margin: 0;
+		padding: 10px 0;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+
+	.imglist__ckbox{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		width: 34px;
+		position: relative;
+		top: auto;
+		left: auto;
+		background-color: transparent;
+		padding: 0;
+		@include box-shadow(0 0 0 rgba(0,0,0,0));
+	}
+
+	.imglist__star{
+		display: table-cell;
+		position: relative;
+		top: auto;
+		bottom: auto;
+		left: auto;
+
+		color: #ccc;
+		width: 26px;
+		background-color: transparent;
+		vertical-align: middle;
+		text-align: left;
+		font-size: 18px;
+		cursor: pointer;
+		&:hover{
+			color: #999;
+		}
+	}
+
+	.imglist__vis{
+		position: relative;
+		display: table-cell;
+		vertical-align: middle;
+		width: 32px;
+		height: auto;
+		text-align: center;
+		margin: 0 auto;
+		border: none;
+		background-color: transparent;
+		@include box-shadow(0 2px 4px rgba(0,0,0,0.2));
+		img{
+			width: 50px;
+		}
+		a{
+			display: block;
+			width: 32px;
+			height: 32px;
+			overflow: hidden;
+			border: 2px solid #fff;
+		}
+	}
+
+	.imglist__txt{
+		display: table-cell;
+		vertical-align: middle;
+		width: 190px;
+	}
+
+	.imglist__tit{
+		cursor: pointer;
+		@include ellipsis;
+		margin: 5px 0 0;
+		padding: 0 10px;
+		font-size: 14px;
+		color: #666;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.imglist__date{
+		width: 140px;
+		margin: 0 0 0 10px;
+		padding: 0;
+		@include ellipsis;
+	}
+
+	.imglist__cat{
+		width: auto;
+		max-width: 150px;
+		margin: 0 0 0 10px;
+		padding: 0;
+		font-size: 11px;
+		color: #999;
+		line-height: 1.2;
+
+		a{
+			color: #666;
+			font-weight: bold;
+		}
+	}
+
+	&.noimg-l{
+		.imglist__vis img{
+			width: 140px;
+		}
+		.imglist__vis a{
+			position: relative;
+			width: 142px;
+			height: auto;
+		}
+	}
+
+
+
+
+	.imglist__status {
+		position: relative;
+		margin-top: 0;
+		padding: 0;
+		min-height: 35px;
+		border-top: none;
+
+		&:after,
+		&:before {
+			bottom: auto;
+			left: auto;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&:after {
+			border-color: rgba(255, 255, 255, 0);
+			border-bottom-color: transparent;
+			border-width: 8px;
+			margin-left: -8px;
+		}
+		&:before {
+			border-color: rgba(238, 238, 238, 0);
+			border-bottom-color: transparent;
+			border-bottom-color: transparent;
+			border-width: 9px;
+			margin-left: -9px;
+		}
+
+	}
+
+		.status__short-txt{
+			display: none;
+		}
+
+		.status__frm{
+			display: block;
+
+			position: relative;
+			top: auto;
+			left: auto;
+			z-index: 10;
+			overflow: visible;
+			height: auto;
+			width: 98%;
+			border: none;
+			border: 1px solid transparent;
+			background-color: transparent;
+			@include box-sizing(border-box);
+			@include box-shadow(0 0 0 rgba(0,0,0,0));
+
+			&:hover{
+				border: 1px solid #eee;
+				background-color: #ffffff;
+			}
+
+			&:after,
+			&:before {
+				bottom: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
+
+			&:after {
+				border-color: rgba(255, 255, 255, 0);
+				border-bottom-color: #ffffff;
+				border-width: 0;
+				margin-left: 0;
+			}
+			&:before {
+				border-color: rgba(238, 238, 238, 0);
+				border-bottom-color: #ccc;
+				border-width: 0;
+				margin-left: 0;
+			}
+
+		}
+
+		.status__txt textarea{
+			width: 100%;
+			font-size: 10px;
+			color: #666;
+			border: none;
+			padding: 5px 80px 0 5px;
+			min-height: 28px;
+			@include box-sizing(border-box);
+			outline: none;
+			resize: vertical;
+			background-color: transparent;
+		}
+
+
+		.status__btn{
+			position: absolute;
+			top: 4px;
+			right: 20px;
+			width: 60px;
+			display: none;
+			.status__frm:hover &{
+				display: block;
+			}
+		}
+
+		.js-refresh .status__btn-refresh{
+			display: block;
+		}
+
+		.status__btn-refresh{
+			display: none;
+			width: 60px;
+			color: #333;
+			border: 1px solid #999;
+			background: #ccc;
+
+			font-size: 10px;
+			margin: 0;
+			padding: 5px 0;
+			line-height: 1.2;
+			text-align: center;
+			@include box-sizing(border-box);
+		}
+
+
+		.js-refresh .status__btn-update{
+			display: none;
+		}
+
+		.status__btn-update{
+			display: block;
+			width: 60px;
+			border: 1px solid #ccc;
+			background: #eee;
+			color: #999;
+			font-size: 10px;
+			margin: 0;
+			padding: 5px 0;
+			line-height: 1.2;
+			text-align: center;
+			cursor: pointer;
+			&:hover{
+				color: #333;
+				border: 1px solid #999;
+				background: #ccc;
+			}
+		}
+
+		.status__editbtn{
+			position: absolute;
+			top: 5px;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			opacity: 0.3;
+			cursor: pointer;
+			background: url(../img/icn_com.png) no-repeat 50% 50%;
+			@include background-size(12px 12px);
+			@include img-replacement();
+			&:hover{
+				opacity: 1;
+			}
+		}
+
+}
+
+
+	}
+}

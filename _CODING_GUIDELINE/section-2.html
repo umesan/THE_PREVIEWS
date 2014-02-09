@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>THE PREVIEW - 制作ガイドライン</title>
+<meta name="description" content="">
+<meta name="generator" content="kss-node">
+<meta name="viewport" content="width=device-width">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+
+
+<!-- Your SITE STYLE SEET -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="../lib/css/style.v01.css">
+
+
+<!-- KSS Template -->
+<link rel="stylesheet" href="public/kss.css">
+
+<!-- SyntaxHighlighter -->
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCore.css">
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCoreRDark.css">
+
+</head>
+<body><div id="kss-wrapper">
+	<div id="kss-nav">
+		<header id="kss-header">
+			<h1>THE PREVIEW</h1>
+		</header>
+		<aside>
+			<nav><ul>
+				<li><a href="index.html">0: TOP</a></li>
+				
+					<li><a href="section-1.html">1.0: Header Module</a></li>
+				
+					<li><a href="section-2.html">2.0: Btn Module</a></li>
+				
+					<li><a href="section-3.html">3.0: Box Module</a></li>
+				
+					<li><a href="section-4.html">4.0: Alert Module</a></li>
+				
+					<li><a href="section-5.html">5.0: Modal Module</a></li>
+				
+					<li><a href="section-6.html">6.0: Menu Module</a></li>
+				
+					<li><a href="section-7.html">7.0: Title Module</a></li>
+				
+					<li><a href="section-8.html">8.0: Vis List Module</a></li>
+				
+					<li><a href="section-9.html">9.0: Upload Module</a></li>
+				
+					<li><a href="section-10.html">10.0: TextArea Module</a></li>
+				
+					<li><a href="section-11.html">11.0: Login Module</a></li>
+				
+					<li><a href="section-12.html">12.0: Visual Module</a></li>
+				
+					<li><a href="section-13.html">13.0: Table Module</a></li>
+				
+					<li><a href="section-14.html">14.0: Autoscroll Module</a></li>
+				
+			</ul></nav>
+		</aside>
+	</div>
+	<div role="main" id="kss-main">
+		<article id="kss-content">
+			
+
+				
+				
+					
+						<h1 class="kss-title"><span class="kss-ref">2.0</span> - Btn Module</h1>
+					
+						
+								
+						
+					 
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">2.1</span> - ボタン01</div>
+					
+						
+
+								
+								<div class="kss-description"><p>ボタンのモジュール01<br>主に下記の場所で使用
+
+</p>
+<ul>
+<li>.header__sort</li>
+</ul>
+</div>
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;m-btn01 {$modifiers}&quot;&gt;a ボタン&lt;/a&gt;
+&lt;p class=&quot;m-btn01 {$modifiers}&quot;&gt;p ボタン&lt;/p&gt;
+&lt;span class=&quot;m-btn01 {$modifiers}&quot;&gt;span ボタン&lt;/span&gt;
+&lt;input type=&quot;submit&quot; class=&quot;m-btn01 {$modifiers}&quot; value=&quot;input ボタン&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;m-btn01 {$modifiers}&quot;&gt;button ボタン&lt;/button&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<a href="#" class="m-btn01 {$modifiers}">a ボタン</a>
+<p class="m-btn01 {$modifiers}">p ボタン</p>
+<span class="m-btn01 {$modifiers}">span ボタン</span>
+<input type="submit" class="m-btn01 {$modifiers}" value="input ボタン">
+<button type="submit" class="m-btn01 {$modifiers}">button ボタン</button>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;a href=&quot;#&quot; class=&quot;m-btn01 {$modifiers}&quot;&gt;a ボタン&lt;/a&gt;
+&lt;p class=&quot;m-btn01 {$modifiers}&quot;&gt;p ボタン&lt;/p&gt;
+&lt;span class=&quot;m-btn01 {$modifiers}&quot;&gt;span ボタン&lt;/span&gt;
+&lt;input type=&quot;submit&quot; class=&quot;m-btn01 {$modifiers}&quot; value=&quot;input ボタン&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;m-btn01 {$modifiers}&quot;&gt;button ボタン&lt;/button&gt;
+</pre>
+								</div>
+ -->
+
+								
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn01--delete</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>削除ボタン</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn01 btn01--delete">a ボタン</a>
+<p class="m-btn01 btn01--delete">p ボタン</p>
+<span class="m-btn01 btn01--delete">span ボタン</span>
+<input type="submit" class="m-btn01 btn01--delete" value="input ボタン">
+<button type="submit" class="m-btn01 btn01--delete">button ボタン</button>
+									</div>
+
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn01--entry</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>投稿</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn01 btn01--entry">a ボタン</a>
+<p class="m-btn01 btn01--entry">p ボタン</p>
+<span class="m-btn01 btn01--entry">span ボタン</span>
+<input type="submit" class="m-btn01 btn01--entry" value="input ボタン">
+<button type="submit" class="m-btn01 btn01--entry">button ボタン</button>
+									</div>
+
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn01--icn-thumb</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>サムネ小</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn01 btn01--icn-thumb">a ボタン</a>
+<p class="m-btn01 btn01--icn-thumb">p ボタン</p>
+<span class="m-btn01 btn01--icn-thumb">span ボタン</span>
+<input type="submit" class="m-btn01 btn01--icn-thumb" value="input ボタン">
+<button type="submit" class="m-btn01 btn01--icn-thumb">button ボタン</button>
+									</div>
+
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn01--icn-thumb-l</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>サムネ大</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn01 btn01--icn-thumb-l">a ボタン</a>
+<p class="m-btn01 btn01--icn-thumb-l">p ボタン</p>
+<span class="m-btn01 btn01--icn-thumb-l">span ボタン</span>
+<input type="submit" class="m-btn01 btn01--icn-thumb-l" value="input ボタン">
+<button type="submit" class="m-btn01 btn01--icn-thumb-l">button ボタン</button>
+									</div>
+
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn01--icn-list</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>リスト小</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn01 btn01--icn-list">a ボタン</a>
+<p class="m-btn01 btn01--icn-list">p ボタン</p>
+<span class="m-btn01 btn01--icn-list">span ボタン</span>
+<input type="submit" class="m-btn01 btn01--icn-list" value="input ボタン">
+<button type="submit" class="m-btn01 btn01--icn-list">button ボタン</button>
+									</div>
+
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn01--icn-list-l</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>リスト大</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn01 btn01--icn-list-l">a ボタン</a>
+<p class="m-btn01 btn01--icn-list-l">p ボタン</p>
+<span class="m-btn01 btn01--icn-list-l">span ボタン</span>
+<input type="submit" class="m-btn01 btn01--icn-list-l" value="input ボタン">
+<button type="submit" class="m-btn01 btn01--icn-list-l">button ボタン</button>
+									</div>
+
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn01--w1</p></dd>
+											</dl>
+<!--
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn01 btn01--w1">a ボタン</a>
+<p class="m-btn01 btn01--w1">p ボタン</p>
+<span class="m-btn01 btn01--w1">span ボタン</span>
+<input type="submit" class="m-btn01 btn01--w1" value="input ボタン">
+<button type="submit" class="m-btn01 btn01--w1">button ボタン</button>
+									</div>
+
+								
+								
+
+
+						
+					
+						</section>
+					
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">2.2</span> - ボタンセット</div>
+					
+						
+
+								
+								<div class="kss-description"><p>ボタンをまとめたモジュール
+主に下記の場所で使用
+
+</p>
+<ul>
+<li>.m-menu</li>
+</ul>
+</div>
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;ul class=&quot;m-btn-set o-cfx&quot;&gt;
+&lt;li class=&quot;btn-set-item&quot;&gt;&lt;a class=&quot;m-btn01 btn01--icn-thumb&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;btn-set-item&quot;&gt;&lt;a class=&quot;m-btn01 btn01--icn-thumb-l&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;btn-set-item&quot;&gt;&lt;a class=&quot;m-btn01 btn01--icn-list&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;btn-set-item&quot;&gt;&lt;a class=&quot;m-btn01 btn01--icn-list-l&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<ul class="m-btn-set o-cfx">
+<li class="btn-set-item"><a class="m-btn01 btn01--icn-thumb"></a></li>
+<li class="btn-set-item"><a class="m-btn01 btn01--icn-thumb-l"></a></li>
+<li class="btn-set-item"><a class="m-btn01 btn01--icn-list"></a></li>
+<li class="btn-set-item"><a class="m-btn01 btn01--icn-list-l"></a></li>
+</ul>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;ul class=&quot;m-btn-set o-cfx&quot;&gt;
+&lt;li class=&quot;btn-set-item&quot;&gt;&lt;a class=&quot;m-btn01 btn01--icn-thumb&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;btn-set-item&quot;&gt;&lt;a class=&quot;m-btn01 btn01--icn-thumb-l&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;btn-set-item&quot;&gt;&lt;a class=&quot;m-btn01 btn01--icn-list&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;btn-set-item&quot;&gt;&lt;a class=&quot;m-btn01 btn01--icn-list-l&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+								</div>
+ -->
+
+								
+
+
+						
+					
+						</section>
+					
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">2.3</span> - ボタン 02</div>
+					
+						
+
+								
+								<div class="kss-description"><p>ボタンのモジュール02<br>主に下記の場所で使用
+
+</p>
+<ul>
+<li>.m-menu</li>
+</ul>
+</div>
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;m-btn02 {$modifiers}&quot;&gt;a ボタン&lt;/a&gt;
+&lt;p class=&quot;m-btn02 {$modifiers}&quot;&gt;p ボタン&lt;/p&gt;
+&lt;span class=&quot;m-btn02 {$modifiers}&quot;&gt;span ボタン&lt;/span&gt;
+&lt;input type=&quot;submit&quot; class=&quot;m-btn02 {$modifiers}&quot; value=&quot;input ボタン&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;m-btn02 {$modifiers}&quot;&gt;button ボタン&lt;/button&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<a href="#" class="m-btn02 {$modifiers}">a ボタン</a>
+<p class="m-btn02 {$modifiers}">p ボタン</p>
+<span class="m-btn02 {$modifiers}">span ボタン</span>
+<input type="submit" class="m-btn02 {$modifiers}" value="input ボタン">
+<button type="submit" class="m-btn02 {$modifiers}">button ボタン</button>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;a href=&quot;#&quot; class=&quot;m-btn02 {$modifiers}&quot;&gt;a ボタン&lt;/a&gt;
+&lt;p class=&quot;m-btn02 {$modifiers}&quot;&gt;p ボタン&lt;/p&gt;
+&lt;span class=&quot;m-btn02 {$modifiers}&quot;&gt;span ボタン&lt;/span&gt;
+&lt;input type=&quot;submit&quot; class=&quot;m-btn02 {$modifiers}&quot; value=&quot;input ボタン&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;m-btn02 {$modifiers}&quot;&gt;button ボタン&lt;/button&gt;
+</pre>
+								</div>
+ -->
+
+								
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn02--upload</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>投稿ボタン</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn02 btn02--upload">a ボタン</a>
+<p class="m-btn02 btn02--upload">p ボタン</p>
+<span class="m-btn02 btn02--upload">span ボタン</span>
+<input type="submit" class="m-btn02 btn02--upload" value="input ボタン">
+<button type="submit" class="m-btn02 btn02--upload">button ボタン</button>
+									</div>
+
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn02--back</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>戻るボタン</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn02 btn02--back">a ボタン</a>
+<p class="m-btn02 btn02--back">p ボタン</p>
+<span class="m-btn02 btn02--back">span ボタン</span>
+<input type="submit" class="m-btn02 btn02--back" value="input ボタン">
+<button type="submit" class="m-btn02 btn02--back">button ボタン</button>
+									</div>
+
+								
+								
+
+
+						
+					
+						</section>
+					
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">2.4</span> - ボタン 03</div>
+					
+						
+
+								
+								<div class="kss-description"><p>ボタンのモジュール03<br>主に下記の場所で使用</p>
+</div>
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;m-btn03 {$modifiers}&quot;&gt;a ボタン&lt;/a&gt;
+&lt;p class=&quot;m-btn03 {$modifiers}&quot;&gt;p ボタン&lt;/p&gt;
+&lt;span class=&quot;m-btn03 {$modifiers}&quot;&gt;span ボタン&lt;/span&gt;
+&lt;input type=&quot;submit&quot; class=&quot;m-btn03 {$modifiers}&quot; value=&quot;input ボタン&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;m-btn03 {$modifiers}&quot;&gt;button ボタン&lt;/button&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<a href="#" class="m-btn03 {$modifiers}">a ボタン</a>
+<p class="m-btn03 {$modifiers}">p ボタン</p>
+<span class="m-btn03 {$modifiers}">span ボタン</span>
+<input type="submit" class="m-btn03 {$modifiers}" value="input ボタン">
+<button type="submit" class="m-btn03 {$modifiers}">button ボタン</button>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;a href=&quot;#&quot; class=&quot;m-btn03 {$modifiers}&quot;&gt;a ボタン&lt;/a&gt;
+&lt;p class=&quot;m-btn03 {$modifiers}&quot;&gt;p ボタン&lt;/p&gt;
+&lt;span class=&quot;m-btn03 {$modifiers}&quot;&gt;span ボタン&lt;/span&gt;
+&lt;input type=&quot;submit&quot; class=&quot;m-btn03 {$modifiers}&quot; value=&quot;input ボタン&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;m-btn03 {$modifiers}&quot;&gt;button ボタン&lt;/button&gt;
+</pre>
+								</div>
+ -->
+
+								
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn03--delete</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>投稿ボタン</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn03 btn03--delete">a ボタン</a>
+<p class="m-btn03 btn03--delete">p ボタン</p>
+<span class="m-btn03 btn03--delete">span ボタン</span>
+<input type="submit" class="m-btn03 btn03--delete" value="input ボタン">
+<button type="submit" class="m-btn03 btn03--delete">button ボタン</button>
+									</div>
+
+								
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>btn03--entry</p></dd>
+											</dl>
+<!--
+											
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p><p>戻るボタン</p>
+</p></dd>
+											</dl>
+											
+-->
+										</div>
+
+
+										<a href="#" class="m-btn03 btn03--entry">a ボタン</a>
+<p class="m-btn03 btn03--entry">p ボタン</p>
+<span class="m-btn03 btn03--entry">span ボタン</span>
+<input type="submit" class="m-btn03 btn03--entry" value="input ボタン">
+<button type="submit" class="m-btn03 btn03--entry">button ボタン</button>
+									</div>
+
+								
+								
+
+
+						
+					
+						</section>
+					
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">2.5</span> - ボタン 04</div>
+					
+						
+
+								
+								<div class="kss-description"><p>ボタンのモジュール04
+管理画面「カテゴリを追加する」ボタン</p>
+</div>
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;a href=&quot;#&quot; class=&quot;m-btn04&quot;&gt;a ボタン&lt;/a&gt;
+&lt;p class=&quot;m-btn04&quot;&gt;p ボタン&lt;/p&gt;
+&lt;span class=&quot;m-btn04&quot;&gt;span ボタン&lt;/span&gt;
+&lt;input type=&quot;submit&quot; class=&quot;m-btn04&quot; value=&quot;input ボタン&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;m-btn04&quot;&gt;button ボタン&lt;/button&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<a href="#" class="m-btn04">a ボタン</a>
+<p class="m-btn04">p ボタン</p>
+<span class="m-btn04">span ボタン</span>
+<input type="submit" class="m-btn04" value="input ボタン">
+<button type="submit" class="m-btn04">button ボタン</button>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;a href=&quot;#&quot; class=&quot;m-btn04&quot;&gt;a ボタン&lt;/a&gt;
+&lt;p class=&quot;m-btn04&quot;&gt;p ボタン&lt;/p&gt;
+&lt;span class=&quot;m-btn04&quot;&gt;span ボタン&lt;/span&gt;
+&lt;input type=&quot;submit&quot; class=&quot;m-btn04&quot; value=&quot;input ボタン&quot;&gt;
+&lt;button type=&quot;submit&quot; class=&quot;m-btn04&quot;&gt;button ボタン&lt;/button&gt;
+</pre>
+								</div>
+ -->
+
+								
+
+
+						
+					
+						</section>
+					
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">2.6</span> - ページナビゲーションボタン</div>
+					
+						
+
+								
+								<div class="kss-description"><p>ページナビゲーション用ボタン</p>
+</div>
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;p class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;a href=&quot;#&quot; class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<p class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-left"></i></p>
+<p class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-right"></i></p>
+<a href="#" class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-left"></i></a>
+<a href="#" class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-right"></i></a>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;p class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;p class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+&lt;a href=&quot;#&quot; class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+</pre>
+								</div>
+ -->
+
+								
+
+
+						
+					
+						</section>
+					
+				
+			
+		</article>
+	</div>
+	<footer>
+		
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var sidebarAdjust = function() {
+				// Match footer/body height
+				var height = Math.max($(window).height(), $('#kss-main').height());
+
+				if ($(window).width() <= 768) {
+					$('#kss-main, #kss-nav').height('auto');
+				} else {
+					$('#kss-main, #kss-nav').height(height);
+				}
+			};
+
+			$(window).resize(sidebarAdjust);
+			$(window).scroll(sidebarAdjust);
+			sidebarAdjust();
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+
+		});
+	</script>
+
+	<!-- SyntaxHighlighter -->
+	<script src="public/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushCss.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+	<script>
+		SyntaxHighlighter.config.clipboardSwf = 'public/SyntaxHighlighter/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+
+</div>
+</body>
+</html>

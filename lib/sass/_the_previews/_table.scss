@@ -1,0 +1,302 @@
+@charset "utf-8";
+// ======================================================================
+
+// Table Module
+// 
+// Styleguide 13
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Table Module 01
+// 
+// テーブルモジュール 01
+//
+// Markup:
+// <div class="m-table01">
+// 	<table>
+// 		<tr>
+// 			<th><p>サイト名</p></th>
+// 			<td><p><input type="text" name="title" value="TEXT" /></p></td>
+// 		</tr>
+// 	</table>
+// </div>
+//
+// Styleguide 13.1
+
+//-----------------------------------------------------------------------
+$m-table01: false !default;
+@mixin m-table01() {
+	@if $m-table01 {}
+	@else {
+		$m-table01: true;
+
+		.m-table01{
+			table{
+				border-collapse: collapse;
+				border-spacing: 0;
+				width: 100%;
+				border-bottom: 1px solid #dddddd;
+				border-right: 1px solid #dddddd;
+				-webkit-box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				box-sizing:border-box;
+			}
+			th{
+				width: 20%;
+				color: #fff;
+				font-size: 14px;
+				text-align: right;
+				font-weight: normal;
+				background: #555;
+				padding: 8px;
+			}
+			td{
+				width: 80%;
+				background: #fff;
+			}
+			td input{
+				border: none;
+				width: 100%;
+				padding: 8px;
+				-webkit-box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				box-sizing:border-box;
+			}
+
+			th,
+			td{
+				border-top: 1px solid #dddddd;
+				border-left: 1px solid #dddddd;
+				-webkit-box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				box-sizing:border-box;
+			}
+		}
+
+	}
+}
+
+
+//-----------------------------------------------------------------------
+
+// Table Module 02
+//
+// テーブルモジュール 02
+//
+// Markup:
+// <div class="m-table02">
+// 	<div class="table02__th">
+// 		カテゴリ名
+// 	</div>
+// 	<div class="table02__td">
+// 		カテゴリID
+// 	</div>
+// </div>
+// <div class="m-table02">
+// 	<div class="table02__th">
+// 		Category Name
+// 	</div>
+// 	<div class="table02__td">
+// 		Category ID
+// 	</div>
+// </div>
+//
+// Styleguide 13.2
+
+//-----------------------------------------------------------------------
+
+$m-table02: false !default;
+@mixin m-table02() {
+	@if $m-table02 {}
+	@else {
+		$m-table02: true;
+
+		.m-table02 {
+			display: table;
+			width: 100%;
+			border: 1px solid #eeeeee;
+			background-color: #e4e4e4;
+			@include box-sizing(border-box);
+			text-align: center;
+		}
+		.m-table02 + .m-table02{
+			background-color: #ffffff;
+			border-top: none;
+			border-bottom: 1px solid #eeeeee;
+			text-align: left;
+		}
+		.table02__th{
+			display: table-cell;
+			width: 30%;
+			border-right: 1px solid #eeeeee;
+			@include box-sizing(border-box);
+			padding: 10px 20px;
+		}
+		.table02__td{
+			display: table-cell;
+			width: 70%;
+			@include box-sizing(border-box);
+			padding: 10px 20px;
+		}
+	}
+}
+
+
+
+
+//-----------------------------------------------------------------------
+
+// Table Module 03
+//
+// テーブルモジュール 03
+//
+// Markup:
+// <ul class="m-table-filelist">
+// 	<li class="o-cfx">
+// 		<div class="table-filelist__head table-filelist__grab"></div>
+// 		<div class="table-filelist__head table-filelist__prefix"><p>カテゴリID</p></div>
+// 		<div class="table-filelist__head table-filelist__name"><p>カテゴリ名</p></div>
+// 		<div class="table-filelist__head table-filelist__url"><p>URL</p></div>
+// 		<div class="table-filelist__head table-filelist__ckbox"></div>
+// 	</li>
+// </ul>
+// <ul id="sortable" class="m-table-filelist">
+// 	<li class="o-cfx" data-catid="xxx">
+// 		<div class="table-filelist__grab"><i class="fa fa-bars"></i></div>
+// 		<div class="table-filelist__prefix">
+// 			<input type="text" name="category[0][prefix]" value="xxx-">
+// 		</div>
+// 		<div class="table-filelist__name">
+// 			<input type="text" name="category[0][name]" value="XXXXXX">
+// 		</div>
+// 		<div class="table-filelist__url">
+// 			<input type="text" name="category[0][url]" value="http://xxx.xxx">
+// 		</div>
+// 		<div class="table-filelist__ckbox"><a href="#"><i class="fa fa-lg fa-trash-o"></i></a></div>
+// 	</li>
+// </ul>
+//
+// Styleguide 13.3
+
+//-----------------------------------------------------------------------
+
+$m-table-fileist: false !default;
+@mixin m-table-fileist() {
+	@if $m-table-fileist {}
+	@else {
+		$m-table-fileist: true;
+
+		.m-table-filelist{
+			position: relative;
+			margin: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+			color: #fff;
+			@include box-sizing(border-box);
+
+			& + .table-filelist{
+				li{
+					background-color: #fff;
+				}
+				li div p{
+					padding: 10px;
+				}
+			}
+
+			li{
+				float: none;
+				width: auto;
+				margin: 0;
+				display: table;
+				background: #fff;
+				border-bottom: 1px solid #ccc;
+				cursor: pointer;
+				@include box-sizing(border-box);
+			}
+			li.act{
+				background: #FEFEC4;
+			}
+
+			// Sort中
+			li.ui-sortable-helper{
+				border: 1px solid #cccccc;
+				opacity: 0.5;
+			}
+
+			li.error div{
+				background-color: #e74c3c;
+			}
+
+			li div{
+				display: table-cell;
+				vertical-align: middle;
+				@include box-sizing(border-box);
+				border-right: 1px solid #eee;
+				background-color: #ffffff;
+				&:last-child{
+					border-right: none;
+				}
+			}
+			li div p{
+				padding: 8px;
+			}
+
+			input {
+				margin: 0;
+				padding: 10px;
+				font-size: 16px;
+				border: none;
+				background-color: transparent;
+				@include box-sizing(border-box);
+			}
+
+			.table-filelist__head {
+				background: #555;
+				text-align: center;
+			}
+
+			.table-filelist__prefix input,
+			.table-filelist__name input,
+			.table-filelist__url input{
+				width: 100%;
+			}
+
+			.table-filelist__grab{
+				width: 5%;
+				text-align: center;
+				color: #999;
+				cursor: move;
+			}
+
+			.table-filelist__head{
+				cursor: default;
+			}
+
+			.table-filelist__ckbox{
+				width: 5%;
+				text-align: center;
+				a{
+					color: #666;
+					display: block;
+					padding: 10px 11px;
+					&:hover{
+						color: #333;
+					}
+				}
+			}
+
+			.table-filelist__name{
+				width: 35%;
+			}
+			.table-filelist__prefix{
+				width: 15%;
+			}
+			.table-filelist__url{
+				width: 40%;
+			}
+		}
+
+	}
+}

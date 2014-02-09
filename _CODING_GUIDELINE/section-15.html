@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>THE PREVIEW - 制作ガイドライン</title>
+<meta name="description" content="">
+<meta name="generator" content="kss-node">
+<meta name="viewport" content="width=device-width">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+
+
+<!-- Your SITE STYLE SEET -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="../lib/css/style.v01.css">
+
+
+<!-- KSS Template -->
+<link rel="stylesheet" href="public/kss.css">
+
+<!-- SyntaxHighlighter -->
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCore.css">
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCoreRDark.css">
+
+</head>
+<body><div id="kss-wrapper">
+	<div id="kss-nav">
+		<header id="kss-header">
+			<h1>THE PREVIEW</h1>
+		</header>
+		<aside>
+			<nav><ul>
+				<li><a href="index.html">0: TOP</a></li>
+				
+					<li><a href="section-1.html">1.0: Header Module</a></li>
+				
+					<li><a href="section-2.html">2.0: Btn Module</a></li>
+				
+					<li><a href="section-3.html">3.0: Box Module</a></li>
+				
+					<li><a href="section-4.html">4.0: Alert Module</a></li>
+				
+					<li><a href="section-5.html">5.0: Modal Module</a></li>
+				
+					<li><a href="section-6.html">6.0: Menu Module</a></li>
+				
+					<li><a href="section-7.html">7.0: Title Module</a></li>
+				
+					<li><a href="section-8.html">8.0: Vis List Module</a></li>
+				
+					<li><a href="section-9.html">9.0: Upload Module</a></li>
+				
+					<li><a href="section-10.html">10.0: TextArea Module</a></li>
+				
+					<li><a href="section-11.html">11.0: Login Module</a></li>
+				
+					<li><a href="section-12.html">12.0: Visual Module</a></li>
+				
+					<li><a href="section-13.html">13.0: Table Module</a></li>
+				
+					<li><a href="section-14.html">14.0: Autoscroll Module</a></li>
+				
+					<li><a href="section-15.html">15.0: ImgView Module</a></li>
+				
+			</ul></nav>
+		</aside>
+	</div>
+	<div role="main" id="kss-main">
+		<article id="kss-content">
+			
+
+				
+				
+					
+						<h1 class="kss-title"><span class="kss-ref">15.0</span> - ImgView Module</h1>
+					
+						
+								
+						
+					 
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">15.1</span> - ImgView</div>
+					
+						
+
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;div id=&quot;imgview&quot; class=&quot;m-imgview&quot;&gt;
+	&lt;header id=&quot;imgviewhead&quot; class=&quot;imgview__head&quot;&gt;
+		&lt;div class=&quot;js-imgviewhead__frm imgview__frm&quot;&gt;
+			&lt;div class=&quot;imgview__frm-inner imgview__frm-inner--top&quot;&gt;
+				&lt;div class=&quot;imgview__title&quot;&gt;
+					&lt;div class=&quot;imgview__title_txt&quot;&gt;
+						&lt;p id=&quot;js-imgview-cattitle&quot; class=&quot;imgview__category&quot;&gt;カテゴリ名&lt;/p&gt;
+						&lt;p id=&quot;js-imgview-imgtitle&quot; class=&quot;imgview__imgtitle&quot;&gt;画像名&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;span id=&quot;js-imgview-imgurl&quot; class=&quot;imgview__imgurl&quot;&gt;&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;nav class=&quot;imgview__nav&quot;&gt;
+				&lt;span id=&quot;js-chevron-left&quot; class=&quot;imgview__btn--chevron-left js-powertip&quot; data-powertip=&quot;前&quot;&gt;&lt;i class=&quot;fa fa-lg fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-chevron-right&quot; class=&quot;imgview__btn--chevron-right js-powertip&quot; data-powertip=&quot;次&quot;&gt;&lt;i class=&quot;fa fa-lg fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-view-change&quot; class=&quot;js-powertip&quot; data-powertip=&quot;表示形式切替&quot;&gt;&lt;i class=&quot;fa fa-lg fa-picture-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-download&quot; class=&quot;js-powertip&quot; data-powertip=&quot;画像ダウンロード&quot;&gt;&lt;i class=&quot;fa fa-lg fa-download&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-link&quot; class=&quot;js-powertip&quot; data-powertip=&quot;画像のリンクを表示&quot;&gt;&lt;i class=&quot;fa fa-lg fa-link&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-external-link&quot; class=&quot;imgview__btn--external-link js-powertip&quot; data-powertip=&quot;画像を開く&quot;&gt;&lt;i class=&quot;fa fa-lg fa-external-link&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;btn_close&quot; class=&quot;js-powertip&quot; data-powertip=&quot;閉じる&quot;&gt;&lt;i class=&quot;fa fa-lg fa-times&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/nav&gt;
+		&lt;/div&gt;
+	&lt;/header&gt;
+	&lt;div id=&quot;js-nav-l&quot; class=&quot;imgview__pagenav imgview__pagenav--l&quot;&gt;
+		&lt;div id=&quot;js-navfrm-l&quot; class=&quot;imgview__pagenav__frm--l&quot;&gt;
+			&lt;p class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;js-nav-r&quot; class=&quot;imgview__pagenav imgview__pagenav--r&quot;&gt;
+		&lt;div id=&quot;js-navfrm-r&quot; class=&quot;imgview__pagenav__frm--r&quot;&gt;
+			&lt;p class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;js-autoscroll&quot; class=&quot;m-autoscroll autoscroll-fixed-bottom&quot;&gt;&lt;/div&gt;
+	&lt;div id=&quot;imgviewlist&quot; class=&quot;m-imgviewlist&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<div id="imgview" class="m-imgview">
+	<header id="imgviewhead" class="imgview__head">
+		<div class="js-imgviewhead__frm imgview__frm">
+			<div class="imgview__frm-inner imgview__frm-inner--top">
+				<div class="imgview__title">
+					<div class="imgview__title_txt">
+						<p id="js-imgview-cattitle" class="imgview__category">カテゴリ名</p>
+						<p id="js-imgview-imgtitle" class="imgview__imgtitle">画像名</p>
+					</div>
+					<span id="js-imgview-imgurl" class="imgview__imgurl"></span>
+				</div>
+			</div>
+			<nav class="imgview__nav">
+				<span id="js-chevron-left" class="imgview__btn--chevron-left js-powertip" data-powertip="前"><i class="fa fa-lg fa-chevron-left"></i></span>
+				<span id="js-chevron-right" class="imgview__btn--chevron-right js-powertip" data-powertip="次"><i class="fa fa-lg fa-chevron-right"></i></span>
+				<span id="js-view-change" class="js-powertip" data-powertip="表示形式切替"><i class="fa fa-lg fa-picture-o"></i></span>
+				<span id="js-download" class="js-powertip" data-powertip="画像ダウンロード"><i class="fa fa-lg fa-download"></i></span>
+				<span id="js-link" class="js-powertip" data-powertip="画像のリンクを表示"><i class="fa fa-lg fa-link"></i></span>
+				<span id="js-external-link" class="imgview__btn--external-link js-powertip" data-powertip="画像を開く"><i class="fa fa-lg fa-external-link"></i></span>
+				<span id="btn_close" class="js-powertip" data-powertip="閉じる"><i class="fa fa-lg fa-times"></i></span>
+			</nav>
+		</div>
+	</header>
+	<div id="js-nav-l" class="imgview__pagenav imgview__pagenav--l">
+		<div id="js-navfrm-l" class="imgview__pagenav__frm--l">
+			<p class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-left"></i></p>
+		</div>
+	</div>
+	<div id="js-nav-r" class="imgview__pagenav imgview__pagenav--r">
+		<div id="js-navfrm-r" class="imgview__pagenav__frm--r">
+			<p class="m-btn__pagenav"><i class="fa fa-3x fa-chevron-right"></i></p>
+		</div>
+	</div>
+	<div id="js-autoscroll" class="m-autoscroll autoscroll-fixed-bottom"></div>
+	<div id="imgviewlist" class="m-imgviewlist"></div>
+</div>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;div id=&quot;imgview&quot; class=&quot;m-imgview&quot;&gt;
+	&lt;header id=&quot;imgviewhead&quot; class=&quot;imgview__head&quot;&gt;
+		&lt;div class=&quot;js-imgviewhead__frm imgview__frm&quot;&gt;
+			&lt;div class=&quot;imgview__frm-inner imgview__frm-inner--top&quot;&gt;
+				&lt;div class=&quot;imgview__title&quot;&gt;
+					&lt;div class=&quot;imgview__title_txt&quot;&gt;
+						&lt;p id=&quot;js-imgview-cattitle&quot; class=&quot;imgview__category&quot;&gt;カテゴリ名&lt;/p&gt;
+						&lt;p id=&quot;js-imgview-imgtitle&quot; class=&quot;imgview__imgtitle&quot;&gt;画像名&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;span id=&quot;js-imgview-imgurl&quot; class=&quot;imgview__imgurl&quot;&gt;&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;nav class=&quot;imgview__nav&quot;&gt;
+				&lt;span id=&quot;js-chevron-left&quot; class=&quot;imgview__btn--chevron-left js-powertip&quot; data-powertip=&quot;前&quot;&gt;&lt;i class=&quot;fa fa-lg fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-chevron-right&quot; class=&quot;imgview__btn--chevron-right js-powertip&quot; data-powertip=&quot;次&quot;&gt;&lt;i class=&quot;fa fa-lg fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-view-change&quot; class=&quot;js-powertip&quot; data-powertip=&quot;表示形式切替&quot;&gt;&lt;i class=&quot;fa fa-lg fa-picture-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-download&quot; class=&quot;js-powertip&quot; data-powertip=&quot;画像ダウンロード&quot;&gt;&lt;i class=&quot;fa fa-lg fa-download&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-link&quot; class=&quot;js-powertip&quot; data-powertip=&quot;画像のリンクを表示&quot;&gt;&lt;i class=&quot;fa fa-lg fa-link&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;js-external-link&quot; class=&quot;imgview__btn--external-link js-powertip&quot; data-powertip=&quot;画像を開く&quot;&gt;&lt;i class=&quot;fa fa-lg fa-external-link&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;span id=&quot;btn_close&quot; class=&quot;js-powertip&quot; data-powertip=&quot;閉じる&quot;&gt;&lt;i class=&quot;fa fa-lg fa-times&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+			&lt;/nav&gt;
+		&lt;/div&gt;
+	&lt;/header&gt;
+	&lt;div id=&quot;js-nav-l&quot; class=&quot;imgview__pagenav imgview__pagenav--l&quot;&gt;
+		&lt;div id=&quot;js-navfrm-l&quot; class=&quot;imgview__pagenav__frm--l&quot;&gt;
+			&lt;p class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;js-nav-r&quot; class=&quot;imgview__pagenav imgview__pagenav--r&quot;&gt;
+		&lt;div id=&quot;js-navfrm-r&quot; class=&quot;imgview__pagenav__frm--r&quot;&gt;
+			&lt;p class=&quot;m-btn__pagenav&quot;&gt;&lt;i class=&quot;fa fa-3x fa-chevron-right&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div id=&quot;js-autoscroll&quot; class=&quot;m-autoscroll autoscroll-fixed-bottom&quot;&gt;&lt;/div&gt;
+	&lt;div id=&quot;imgviewlist&quot; class=&quot;m-imgviewlist&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+								</div>
+ -->
+
+								
+
+
+						
+					
+						</section>
+					
+				
+			
+		</article>
+	</div>
+	<footer>
+		
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var sidebarAdjust = function() {
+				// Match footer/body height
+				var height = Math.max($(window).height(), $('#kss-main').height());
+
+				if ($(window).width() <= 768) {
+					$('#kss-main, #kss-nav').height('auto');
+				} else {
+					$('#kss-main, #kss-nav').height(height);
+				}
+			};
+
+			$(window).resize(sidebarAdjust);
+			$(window).scroll(sidebarAdjust);
+			sidebarAdjust();
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+
+		});
+	</script>
+
+	<!-- SyntaxHighlighter -->
+	<script src="public/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushCss.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+	<script>
+		SyntaxHighlighter.config.clipboardSwf = 'public/SyntaxHighlighter/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+
+</div>
+</body>
+</html>

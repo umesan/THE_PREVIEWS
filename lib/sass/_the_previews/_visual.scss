@@ -1,0 +1,41 @@
+@charset "utf-8";
+// ======================================================================
+
+// Visual Module
+// 
+// Styleguide 12
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Login Module
+//
+// Markup:
+// <div class="m-lock">
+// 	<i class="fa fa-4x fa-lock"></i>
+// </div>
+//
+// Styleguide 12.1
+
+//-----------------------------------------------------------------------
+
+$m-lock: false !default;
+@mixin m-lock() {
+	@if $m-lock {}
+	@else {
+		$m-lock: true;
+
+.m-lock{
+	background-color: #A0C3FF;
+	width: 100px;
+	height: 100px;
+	@include border-radius(50px);
+	text-align: center;
+	line-height: 140px;
+	color: #fff;
+}
+
+
+	}
+}

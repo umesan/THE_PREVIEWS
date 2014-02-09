@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>THE PREVIEW - 制作ガイドライン</title>
+<meta name="description" content="">
+<meta name="generator" content="kss-node">
+<meta name="viewport" content="width=device-width">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+
+
+<!-- MarkDown Style -->
+<link rel="stylesheet" href="public/kss_markdown.css">
+
+
+
+<!-- KSS Template -->
+<link rel="stylesheet" href="public/kss.css">
+
+<!-- SyntaxHighlighter -->
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCore.css">
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCoreRDark.css">
+
+</head>
+<body><div id="kss-wrapper">
+	<div id="kss-nav">
+		<header id="kss-header">
+			<h1>THE PREVIEW</h1>
+		</header>
+		<aside>
+			<nav><ul>
+				<li><a href="index.html">0: TOP</a></li>
+				
+					<li><a href="section-1.html">1.0: Header Module</a></li>
+				
+					<li><a href="section-2.html">2.0: Btn Module</a></li>
+				
+					<li><a href="section-3.html">3.0: Box Module</a></li>
+				
+					<li><a href="section-4.html">4.0: Alert Module</a></li>
+				
+					<li><a href="section-5.html">5.0: Modal Module</a></li>
+				
+					<li><a href="section-6.html">6.0: Menu Module</a></li>
+				
+					<li><a href="section-7.html">7.0: Title Module</a></li>
+				
+					<li><a href="section-8.html">8.0: Vis List Module</a></li>
+				
+					<li><a href="section-9.html">9.0: Upload Module</a></li>
+				
+					<li><a href="section-10.html">10.0: TextArea Module</a></li>
+				
+					<li><a href="section-11.html">11.0: Login Module</a></li>
+				
+					<li><a href="section-12.html">12.0: Visual Module</a></li>
+				
+					<li><a href="section-13.html">13.0: Table Module</a></li>
+				
+					<li><a href="section-14.html">14.0: Autoscroll Module</a></li>
+				
+			</ul></nav>
+		</aside>
+	</div>
+	<div role="main" id="kss-main">
+		<article id="kss-content">
+			
+				<h1>制作ガイドライン</h1>
+<p>バージョン：0.1<br>最終更新日：2014/02/01
+
+
+</p>
+<h2>はじめに</h2>
+<p>THE PREVIEW 制作ガイドラインです。<br>こちらのルールに従って制作しています。
+
+
+</p>
+<h2>HTML</h2>
+<h3>ドキュメントタイプ <em class="REQ">※必須</em></h3>
+<p>HTML5
+
+</p>
+<pre class="brush:html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+</pre>
+
+
+<h3>エンコード <em class="REQ">※必須</em></h3>
+<p>UTF-8 （BOM無し）
+</p>
+<pre class="brush:html">
+<meta charset="utf-8">
+</pre>
+
+
+<h3>インデント <em class="REQ">※必須</em></h3>
+<p>タブ(半角4つぶん)を使用。
+
+
+</p>
+<h3>改行コード <em class="REQ">※必須</em></h3>
+<p>CR+LF
+
+
+</p>
+<h3>閉じタグについて <em class="REQ">※必須</em></h3>
+<p>終了タグを省略して表記。
+
+</p>
+<pre class="brush:html">
+<meta charset="shift_jis">
+<br>
+&lt;img src=&quot;xxx.png&quot; alt=&quot;xxxx&quot; width=&quot;100&quot; height=&quot;100&quot;&gt;
+</pre>
+
+
+<h3>type属性の省略 <em class="REQ">※必須</em></h3>
+<p>link や script タグの type属性を省略して表記。
+
+</p>
+<pre class="brush:html">
+&lt;script src=&quot;xxxx.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;xxx.css&quot;&gt;
+</pre>
+
+
+<h3>実態参照について <em class="REQ">※必須</em></h3>
+<p>特殊文字は実態参照で表記。
+
+</p>
+<pre class="brush:html">
+&amp;  →  &amp;amp;
+&copy;  →  &amp;copy;
+&lt;  →  &amp;lt;
+&gt;  →  &amp;gt;
+&#12316; →  &amp;#12316;
+</pre>
+
+
+<p>＜参考サイト＞
+</p>
+<blockquote>
+<p>実態参照一覧<br><a href="http://www.ne.jp/asahi/minazuki/bakera/html/reference/charref">http://www.ne.jp/asahi/minazuki/bakera/html/reference/charref</a>
+
+</p>
+</blockquote>
+<h3>コメント</h3>
+<p>第三者が内容を把握しやすくするため、適宜コメントを記述。  
+
+
+</p>
+<h3>BEM</h3>
+<p>BEMのルールでコーディング。
+
+</p>
+<blockquote>
+<p>＜BEMについて＞<br><a href="https://github.com/juno/bem-methodology-ja/blob/master/definitions.md">https://github.com/juno/bem-methodology-ja/blob/master/definitions.md</a>
+
+</p>
+<p>＜実践 めんどうくさくない BEM＞<br><a href="http://tsmd.hateblo.jp/entry/2013/12/12/004059">http://tsmd.hateblo.jp/entry/2013/12/12/004059</a>
+
+</p>
+<p>＜MindBEMding＞<br><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/</a>
+
+</p>
+<p>＜BEM とは＞<br><a href="http://chroma.hatenablog.com/entry/2013/12/12/200817">http://chroma.hatenablog.com/entry/2013/12/12/200817</a>
+
+
+</p>
+</blockquote>
+<h2>CSS ＆ Sass ガイドライン</h2>
+<h3>概要</h3>
+<p>CSS・Sassの品質を保つため、CSS, Sass 定義時のルールを設ける。<br>CSSとSassで共通となるルールを定義している。  
+
+</p>
+<p>CSS・Sassそれぞれのルールに関しては、<br>別途「CSSガイドライン」「Sassガイドライン」にて解説する。
+
+
+</p>
+<h3>優先順位</h3>
+<p>CSS・Sassは下記の優先順位に沿って設計。<br>新規スタイルの際に迷ったり、既存コードについて疑問に思った際は、<br>下記の優先順位を確認。
+
+</p>
+<blockquote>
+<ol>
+<li>更新時に、スタイルのコンフリクトによる事故を起こさないこと</li>
+<li>スタイルファイルサイズが軽量であること</li>
+<li>制作時にclass名で悩まないこと</li>
+<li>スタイルの拡張・修正がしやすいこと</li>
+<li>複数人で同時作業が可能なこと</li>
+<li>誰でも更新できること（制作者のSass・CSSの理解度に依存しない）</li>
+</ol>
+</blockquote>
+<h3>Sassの活用 <em class="REQ">※必須</em></h3>
+<p>THE PREVIEW では、Sassを使ってCSSコーディングの効率化する。<br>そのため、Sass環境を構築していない場合は、スタイル編集・制作を原則禁止。  
+
+</p>
+<div class="RED">
+絶対に、cssファイルを直接編集しない。
+</div>
+
+
+<h3>文字コード <em class="REQ">※必須</em></h3>
+<p>CSS・Sassともに、<strong>UTF-8</strong> を採用し、各CSSファイルの先頭で文字コード宣言を行う。
+</p>
+<pre class="brush:css">
+@charset &quot;UTF-8&quot;;
+</pre>
+
+
+<h3>改行コード <em class="REQ">※必須</em></h3>
+<p>Css・Sassともに、CR+LFを採用
+
+
+</p>
+<h3>インデント <em class="REQ">※必須</em></h3>
+<p>＜CSS＞<br>開発時は、半角スペース二つ<br>本番配信用ファイルでは、圧縮するためインデントなし
+　<br>　<br>＜Sass＞<br>タブ（半角4つ分）
+
+</p>
+<div class="YEL">
+Sassのコンパイル設定によって、出力されるCSSファイル内のインデントは変わります。<br>　<br>Sassのデフォルト設定では、<br>コンパイル設定をexpandedやnested形式にした場合、<br>半角2つでインデントがとられます。<br>　<br>Sassファイル内では、インデントをタブ（半角4つ分）でとっていますが、<br>出力されるCSSは、上記デフォルト設定に任せています。<br>　<br>同一プロジェクト内において、<br>インデント形式の異なるドキュメントファイルが存在するという事実は、<br>誠に遺憾ではありますが、以下の理由により許容しています。<br>　<br>1. 最終的にcompressedするためインデントはなくなる<br>2. このプロジェクトではCSSファイルを直接編集することはない<br>　<br>　<br>尚、どうしても我慢ならぬ方は、<br>下記を参考にコンパイルされるCSSファイルのインデント形式を変更してください。<br><a href="http://www.skyward-design.net/blog/archives/000121.html">http://www.skyward-design.net/blog/archives/000121.html</a>
+
+</div>
+
+
+<h3>IDセレクタへのスタイル指定禁止 <em class="REQ">※必須</em></h3>
+<p><strong>IDセレクタへのスタイルはつけない。</strong><br>スタイルはclass に対して指定すること。  
+
+</p>
+<p>＜理由＞  
+</p>
+<blockquote>
+<ul>
+<li>IDセレクタに付加したスタイルは再利用ができないため  </li>
+<li>マルチクラスによる、オーバーライドがしにくくなるため  </li>
+<li>オーバーライドするために、セレクタを増やすことになるため、結果ファイルサイズが増加する  </li>
+</ul>
+</blockquote>
+<h3>js- プレフィックスを付けたクラスへのスタイル指定禁止</h3>
+<p>JavaScript用のプレフィックスクラスである js- に対してはスタイルは付加しません。
+
+
+</p>
+<h3>h1,h2,h3,h4,h5,h6・・・タグへのスタイル指定禁止</h3>
+<p>h1,h2,h3等の見出しタグへの、共通CSSでスタイル付けをおこなわない。<br>
+スタイルを付加したい場合は、別途スタイル用のクラス（例、class=&quot;m-tit&quot;）を割り当ててください。
+
+</p>
+<p>＜理由＞
+</p>
+<blockquote>
+<p>h1 や h2 にスタイルを直接付加してしまうと、スタイルに左右されてしまい、決まったエリアにしかh1,h2が使えなくなります。<br>サイトの構成上用途に応じた適切な箇所にタグ付けするために、h1 や h2 にスタイルを直接付加しません。
+
+
+</p>
+</blockquote>
+<h3>プロパティの値が0の場合は単位を省略する</h3>
+<p>プロパティの値として 0 を指定する場合は、単位表示を省略する
+
+</p>
+<p>＜採用＞
+</p>
+<pre class="brush:css">
+margin: 0;
+</pre>
+
+<p>＜非採用＞
+</p>
+<pre class="brush:css">
+margin: 0px;
+</pre>
+
+
+<h3>ゼロ以下の値を記述する場合は、0を含める</h3>
+<p>ゼロ以下の値（0.x）を指定する場合、見通しを考慮して、0は明記する。<br>一瞬間違っているかと思うため。
+
+</p>
+<p>＜採用＞
+</p>
+<pre class="brush:css">
+font-size: 0.9em;
+</pre>
+
+<p>＜非採用＞
+</p>
+<pre class="brush:css">
+font-size: .9em;
+</pre>
+
+
+<h3>色定義</h3>
+<p>色定義は、16進数で定義し、6桁で記述する。<br>表記統一のため。
+
+</p>
+<p>＜採用＞
+</p>
+<pre class="brush:css">
+color: #ff0000;
+</pre>
+
+<p>＜非採用＞
+</p>
+<pre class="brush:css">
+color: #f00;
+color: red;
+</pre>
+
+
+<h3>CSS内の url() 指定に関して</h3>
+<p>url() ではシングルクォーテーションを使用。<br>クォーテーションなしや、ダブルクォーテーションは利用しない。<br>CompassのHelper関数利用時も同様。  
+
+</p>
+<p>理由は、表記統一のため（Compassのデフォルト出力がシングルクォーテーション）。
+
+</p>
+<p>＜採用＞
+</p>
+<pre class="brush:css">
+background-image: url(&apos;../img/test.png&apos;);
+// CompassのHelper関数利用時
+background-image: image-url(&apos;../img/test.png&apos;);
+</pre>
+
+<p>＜非採用＞
+</p>
+<pre class="brush:css">
+background-image: url(../img/test.png);
+background-image: url(&quot;../img/test.png&quot;);
+</pre>
+
+
+<h3>コメントルール</h3>
+<p>開発中のコードの見通しをよくするために、各セクションに対して適宜コメントを記述。<br>最終的にcssをminify化する際にコメントを削除。
+
+
+</p>
+<h4>目次</h4>
+<pre class="brush:css">
+/**
+ * PROJECT NAME
+ * @require 必要な環境、フレームワーク類があれば記述
+ * @version x.x.x
+ * @update xxxx/xx/xx
+ */
+</pre>
+
+<h4>大見出し</h4>
+<pre class="brush:css">
+/*----------------------------------------
+
+ 大見出し
+
+----------------------------------------*/
+</pre>
+
+
+<h4>中見出し</h4>
+<pre class="brush:css">
+/*----------------------------------------
+ 中見出し
+----------------------------------------*/
+</pre>
+
+
+<h4>小見出し</h4>
+<pre class="brush:css">
+/* 小見出し */
+</pre>
+
+
+
+<h3>!important の使用について</h3>
+<p>ヘルパークラスに使うのは可。<br>場当たり的な問題解決として利用するのは禁止。
+
+</p>
+<pre class="brush:css">
+.error{ color: red !important; }
+</pre>
+
+
+<h3>セレクタとプロパティの記述ルール</h3>
+<div class="YEL">
+THE PREVIEWではSassを使っているため、開発環境では自動的に下記の形式でCSSが出力されます。<br>本番配信時は、CSSファイルが圧縮されるため上記のルールには当てはまらなくなりますが問題ありません。
+</div>
+
+<p>スタイルを記述する際は、下記の点に注意すること。
+
+</p>
+<blockquote>
+<ul>
+<li>セレクタの直後には半角スペースを記述</li>
+<li>プロパティの前にはタブ1つでインデント</li>
+<li>指定が複数になる場合は基本1行に1プロパティ</li>
+<li>指定が少ない場合は1行で記述してもよい</li>
+<li>セミコロンは省略せず必ず付ける</li>
+</ul>
+</blockquote>
+<h4>複数行の場合</h4>
+<pre class="brush:css">
+.selector {
+    property1: value1;
+    property2: value2;
+}
+</pre>
+
+<h4>1行の場合</h4>
+<pre class="brush:css">.selector { property3: value3; }</pre>
+
+
+<h3>DOMの構成と一致するようにルールセットのインデント</h3>
+<p>DOMの構成と一致するようにCSS側もルールセットをインデントすると、<br>親子関係が把握できてコードの見通しが良くなるため、<br>開発時には、こちらのルールを推奨（強制はしない）。
+
+</p>
+<h4>HTML</h4>
+<pre class="brush:html">
+<div class="m-header">
+  <p class="header-link"></p>
+</div>
+</pre>
+
+<h4>CSS</h4>
+<pre class="brush:css">
+.m-header {
+    property: value;
+}
+    .header-link {
+        property: value;
+    }
+</pre>
+
+
+<h2>CSSガイドライン</h2>
+<h3>概要</h3>
+<p>CSSの品質を保つため、CSS定義時のルールを設ける。<br>基本的にこちらのルールを遵守。
+
+</p>
+<div class="YEL">
+THE PREVIEW では、Sassを利用しているため、<br>このCSSガイドラインは、「SassからコンパイルされたCSSファイルが、どういう状態にあるべきか」 を定義する。<br></div>
+
+
+
+<h3>CSSファイルの外部ファイル化</h3>
+<p>CSSファイルは外部ファイル化すること  
+
+</p>
+<pre class="brush:css">
+<link rel="stylesheet" href="xxx.css" media="all">
+</pre>
+
+
+<h3>HTML内、インラインスタイルの禁止</h3>
+<p>htmlファイルのhead要素内での指定は不可。  
+
+</p>
+<pre class="brush:css">
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+<meta charset="utf-8">
+<title>head内でのスタイル指定は禁止</title>
+<style>
+.ban{ display: none; }
+</style>
+&lt;/head&gt;
+</pre>
+
+
+<p>htmlファイルに、インラインでのstyle属性での指定も不可
+
+</p>
+<pre class="brush:css">
+<p style="display: block;">インラインでのスタイル指定禁止</p>
+</pre>
+
+
+<h3>全体構成</h3>
+<p>1ファイルにまとめて記述する方式を採用。<br>ページ毎のスタイルファイルは持たない。<br>スタイルシートの大まかな構成は下記の通り。
+
+</p>
+<blockquote>
+<ol>
+<li>リセットCSS</li>
+<li>サイト独自の初期設定</li>
+<li>サイト独自の汎用（ヘルパー）クラス</li>
+<li>大枠レイアウト情報</li>
+<li>個別モジュール</li>
+</ol>
+</blockquote>
+<h3>リセットCSS <em class="REQ">※必須</em></h3>
+<p>THE PREVIEWのリセットCSSは、html5doctor.com Reset Stylesheet v1.6.1 を使用しています。<br>リセットCSSではリセットしきれないスタイルや、サイト制作時に役立つ汎用クラス等は<br>リセットCSSのあとに追記しています。
+
+</p>
+<pre class="brush:css">
+/*
+html5doctor.com Reset Stylesheet v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - <a href="http://richclarkdesign.com">http://richclarkdesign.com</a>
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: &apos;&apos;;
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+</pre>
+
+
+<h3>サイト独自の初期設定 <em class="REQ">※必須</em></h3>
+<p>リセットCSSの適用後に、サイト独自の初期設定を加えています。
+
+</p>
+<ul>
+<li>基準フォントの指定</li>
+<li>スクロールバー色の指定</li>
+<li>リンクの指定</li>
+<li>clearfix</li>
+<li>body設定</li>
+</ul>
+<pre class="brush:css">
+/*----------------------------------------
+ OverWrite FontSetting
+----------------------------------------*/
+body {
+  font-size: 14px;
+  font-family: &quot;メイリオ&quot;, Meiryo, &quot;ＭＳ Ｐゴシック&quot;, &quot;ヒラギノ角ゴ Pro W3&quot;, &quot;Hiragino Kaku Gothic Pro&quot;, sans-serif;
+  line-height: 1;
+}
+
+/*----------------------------------------
+  WebKit Scrollbar
+----------------------------------------*/
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background-color: #eeeeee;
+  border-left: 1px solid #e4e4e4;
+}
+
+::-webkit-scrollbar:horizontal {
+  border-top: 1px solid #e4e4e4;
+  height: 12px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-piece {
+  background: #bbb;
+}
+
+::-webkit-scrollbar-thumb {
+  overflow: hidden;
+  background: #2E3033;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/*----------------------------------------
+  Link Setting
+----------------------------------------*/
+a {
+  color: #F00;
+  font-size: 14px;
+}
+a:visited {
+  color: #888;
+}
+
+/*----------------------------------------
+  clearfix
+----------------------------------------*/
+.o-cfx:after {
+  content: &quot; &quot;;
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*----------------------------------------
+  display: none;
+----------------------------------------*/
+.o-hide {
+  display: none !important;
+}
+
+/*----------------------------------------
+  display: block;
+----------------------------------------*/
+.o-show {
+  display: block !important;
+}
+
+/*----------------------------------------
+  PageMode
+----------------------------------------*/
+body {
+  width: 100%;
+  min-width: 980px;
+  background: #eff0f0;
+}
+body.mode-imgview {
+  overflow-x: auto;
+  min-width: 100%;
+  background-color: #fff;
+}
+</pre>
+
+
+<h3>サイト独自の汎用(ヘルパー)クラス <em class="REQ">※必須</em></h3>
+<p>よく使うシングルプロパティを個別のクラスとして用意しています。<br>多様は禁物ですが、例外・緊急な対応が入った際に利用してください。
+
+
+</p>
+<pre class="brush:css">
+/*----------------------------------------
+ Single-propaty for space
+----------------------------------------*/
+.pt0, .ptb0, .pa0 {
+  padding-top: 0px !important;
+}
+
+.pr0, .prl0, .pa0 {
+  padding-right: 0px !important;
+}
+
+.pb0, .ptb0, .pa0 {
+  padding-bottom: 0px !important;
+}
+
+.pl0, .prl0, .pa0 {
+  padding-left: 0px !important;
+}
+
+.mt0, .mtb0, .ma0 {
+  margin-top: 0px !important;
+}
+
+.mr0, .mrl0, .ma0 {
+  margin-right: 0px !important;
+}
+
+.mb0, .mtb0, .ma0 {
+  margin-bottom: 0px !important;
+}
+
+.ml0, .mrl0, .ma0 {
+  margin-left: 0px !important;
+}
+
+/* 0 - 100 まで5px間隔でマージン・パディングのクラスを追加 */
+
+.pt100, .ptb100, .pa100 {
+  padding-top: 100px !important;
+}
+
+.pr100, .prl100, .pa100 {
+  padding-right: 100px !important;
+}
+
+.pb100, .ptb100, .pa100 {
+  padding-bottom: 100px !important;
+}
+
+.pl100, .prl100, .pa100 {
+  padding-left: 100px !important;
+}
+
+.mt100, .mtb100, .ma100 {
+  margin-top: 100px !important;
+}
+
+.mr100, .mrl100, .ma100 {
+  margin-right: 100px !important;
+}
+
+.mb100, .mtb100, .ma100 {
+  margin-bottom: 100px !important;
+}
+
+.ml100, .mrl100, .ma100 {
+  margin-left: 100px !important;
+}
+
+/*----------------------------------------
+ Single-propaty for font
+----------------------------------------*/
+.fwb {
+  font-weight: bold !important;
+}
+
+.fwn {
+  font-weight: normal !important;
+}
+
+/*----------------------------------------
+ Single-propaty for text-decoration
+----------------------------------------*/
+.tdu {
+  text-decoration: underline !important;
+}
+
+.tdn {
+  text-decoration: none !important;
+}
+
+/*----------------------------------------
+ Single-propaty for visibility
+----------------------------------------*/
+.vh {
+  visibility: hidden !important;
+}
+
+.vv {
+  visibility: visible !important;
+}
+
+/*----------------------------------------
+ Single-propaty for float
+----------------------------------------*/
+.fl {
+  float: left !important;
+}
+
+.fr {
+  float: right !important;
+}
+
+.fn {
+  float: none !important;
+}
+
+/*----------------------------------------
+ Single-propaty for text-align
+----------------------------------------*/
+.tal {
+  text-align: left !important;
+}
+
+.tar {
+  text-align: right !important;
+}
+
+.tac {
+  text-align: center !important;
+}
+
+/*----------------------------------------
+ Single-propaty for vertical-align
+----------------------------------------*/
+.vat {
+  vertical-align: top !important;
+}
+
+.vam {
+  vertical-align: middle !important;
+}
+
+.vab {
+  vertical-align: bottom !important;
+}
+
+/*----------------------------------------
+ Single-propaty for position
+----------------------------------------*/
+.pr {
+  position: relative !important;
+}
+
+.pa {
+  position: absolute !important;
+}
+
+/*----------------------------------------
+ Single-propaty for display
+----------------------------------------*/
+.db {
+  display: block !important;
+}
+
+.di {
+  display: inline !important;
+}
+
+.dn {
+  display: none !important;
+}
+
+.dib {
+  display: inline-block !important;
+}
+
+.dt {
+  display: table !important;
+}
+
+.dtc {
+  display: table-cell !important;
+}
+
+/*----------------------------------------
+ Single-propaty for margin
+----------------------------------------*/
+.mrla {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/*----------------------------------------
+ Single-propaty for Width
+----------------------------------------*/
+.w-full {
+  width: 100%;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.w-third {
+  width: 33.3%;
+}
+
+.w-quater {
+  width: 25%;
+}
+
+.w-fifth {
+  width: 20%;
+}
+
+/*----------------------------------------
+ Single-propaty for image Replace
+----------------------------------------*/
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*----------------------------------------
+ Single-propaty for ellipsis
+----------------------------------------*/
+.elp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</pre>
+
+
+<h2>Sass ガイドライン</h2>
+<h3>概要</h3>
+<p>本サイトの制作手法として、Sassを使ってCSSコーディングの効率化を図っている。<br>まず、Sassを使用可能な環境を構築した後、<br>Scssファイルを編集・コンパイルすることでCSSファイルを生成すること。
+
+
+</p>
+<h3>@import をする際のルール <em class="REQ">※必須</em></h3>
+<p>パーシャルファイルの読み込み指定は、拡張子や接頭辞の_（アンダースコア）を略した表記も可能ではあるが、<br>時間を置いてファイルを見直した際や、第三者への引継ぎの際に、直感的にimport先を理解することができないため、<br>必ずアンダースコアや拡張子を省略しないで記述すること。
+
+</p>
+<pre class="brush:css">
+@import &quot;_xxx.scss&quot;;
+@import &quot;_yyy.scss&quot;;
+</pre>
+
+<p>下記の形でも読み込めます。
+</p>
+<pre class="brush:css">
+@import &quot;_xxx&quot;;
+@import &quot;yyy&quot;;
+</pre>
+
+<p>また、@importが複数ある場合、1行で書くこともできますが読みづらいのでしていません。
+</p>
+<pre class="brush:css">
+@import &quot;_xxx.scss&quot;, &quot;_yyy.scss&quot;;
+</pre>
+
+
+<h3>ネストの深さ</h3>
+<p>基本3レベルまで
+
+</p>
+<p>＜理由＞
+</p>
+<blockquote>
+<p>ネストが深くなると、汎用性がなくなるため<br>また、ファイルサイズが増加するため  
+
+</p>
+</blockquote>
+<p>＜参考サイト＞
+</p>
+<blockquote>
+<p><a href="http://t32k.me/mol/log/the-perfect-css-i-thought/">Nestが深い - ぼくのかんがえたさいきょうのしーえしゅえしゅ</a>
+
+
+</p>
+</blockquote>
+<h2>Sassファイル構成 <em class="REQ">※必須</em></h2>
+<p>このサイトのディレクトリ構成です。  
+
+</p>
+<pre class="brush:css">
+───────────────────────────────────────────────────────────────
+ディレクトリ構成
+───────────────────────────────────────────────────────────────
+sass
+  │
+  ├─ config.rb   ・・・   Compass設定ファイル
+  │
+  ├─ _config.scss   ・・・   サイト初期設定用ファイル
+  │
+  ├─ _core ・・・ プロジェクトをまたいで利用できる共通Sassファイルを格納
+  │    │
+  │    ├─ _core.scss ・・・ _core内のfunction,mixin,placeholderを一括管理するファイル
+  │    │
+  │    ├─ function ・・・  カスタム関数 配置ディレクトリ
+  │    │    ├─ _fs.scss ・・・ font-size指定の支援関数
+  │    │    └─ _fz.scss ・・・ font-size指定の支援関数
+  │    │
+  │    ├─ mixin ・・・ Mixin 配置ディレクトリ
+  │    │    ├─ _clearfix.scss ・・・ clearfix 出力Mixin
+  │    │    ├─ _compass_overwrite.scss ・・・ Compassの初期設定を上書きするMixin
+  │    │    ├─ _ellipsis.scss ・・・ ellipsis 出力Mixin
+  │    │    ├─ _fontTable.scss ・・・ フォントの一覧表を出力するMixin
+  │    │    ├─ _img-replacement.scss ・・・ 画像置換用Mixin
+  │    │    ├─ _img-replacement-sprite.scss ・・・ CSS Sprite用 Mixin
+  │    │    ├─ _inline-block.scss ・・・ inline-block 出力Mixin
+  │    │    ├─ _min_height.scss ・・・ min-height 出力Mixin
+  │    │    ├─ _placeholder-color.scss ・・・ フォームのplaceholder属性の指定 Mixin
+  │    │    ├─ _single-property.scss ・・・ サイト制作でよく利用するSinglePropertyをまとめたMixin
+  │    │    └─ _spacing.scss ・・・ margin・paddingによるスペースを作成するMixin
+  │    │
+  │    │
+  │    ├─ placeholder ・・・ プレースホルダー 配置ディレクトリ
+  │    │    ├─ _clearfix.scss ・・・ clearfix 出力プレースホルダー
+  │    │    ├─ _ellipsis.scss ・・・ ellipsis 出力プレースホルダー
+  │    │    ├─ _img-replacement.scss ・・・ 画像置換用 プレースホルダー
+  │    │    └─ _inline-block.scss ・・・ inline-block 出力プレースホルダー
+  │    │
+  │    │
+  │    └─ reset ・・・ リセットCSS 配置ディレクトリ
+  │         ├─ _compass.scss
+  │         ├─ _html5doctor.scss
+  │         ├─ _normalize-2.1.1.scss
+  │         ├─ _normalize-2.1.2.scss
+  │         ├─ _normalize-2.1.3.scss
+  │         └─ _setting.scss ・・・ _config.scss で指定したリセットCSSを出力するファイル
+  │
+  │
+  └─ common
+      ├─ main.v01.scss ・・・ メインのSCSS
+      ├─ モジュール群
+      └─ styleguide.md ・・・ スタイルガイド記述用のMarkDownファイル
+</pre>
+
+
+
+<h3>Mixin ファイルの構造</h3>
+<h4>基本構造</h4>
+<p>セレクタごと出力するようなmixinでは、意図せず重複したセレクタが出力されないように、<br>下記の構造で mixin 化します。
+
+</p>
+<pre class="brush:css">
+$m-XXXX: false !default;
+@mixin m-XXXX() {
+  @if $m-XXXX {}
+  @else {
+    $m-XXXX: true;
+    .m-XXXX {
+    }
+  }
+}
+</pre>
+
+<p>＜理由＞
+</p>
+<blockquote>
+<p>セレクタごと（.m-XXXX{}のように）出力するような、mixin を作る場合、<br>sassファイルの各場所で、そのmixin が @includeで呼び出された際に、<br>@include　された数だけ、そのクラスが出力されてしまうことになります。  
+
+</p>
+<p>コンパイル後のCSSファイル内に、重複したセレクタが増え、<br>ファイル容量やパフォーマンスの面でも好ましくありません。  
+
+</p>
+<p>そこで、意図せず、@include を複数された場合でも、<br>セレクタが重複して出力されないように、<br>すでに一度　mixinが　@include　されている場合は、<br>2度目以降は　@include　されても中身を出力しないようにするmixin構造を採用しています。
+
+</p>
+</blockquote>
+<p>＜参考サイト＞
+</p>
+<blockquote>
+<p><a href="http://nodot.jp/articles/singletoninsass.html">参考URL - Sass で Singleton を実現し、安心してクラスを再利用する</a>
+<a href="http://nodot.jp/articles/placeholderselector.html">参考URL - Sass 3.2 からは placeholder selector を使おう</a>
+
+
+</p>
+</blockquote>
+<h3>モジュール記述ルール</h3>
+<p>モジュールを作成する際は、下記の命名規則で作成する
+
+</p>
+<ul>
+<li>モジュールはm-はじまり</li>
+<li>単語の区切りはハイフン</li>
+<li>モジュールの子要素は、モジュール名からm-をのぞいたものを引継ぐ</li>
+</ul>
+<pre class="brush:css">
+.m-hoge{
+    .hoge__item{
+    }
+    .hoge__txt{
+    }
+}
+</pre>
+
+
+<h3>モジュールの子要素のクラス名</h3>
+<p>モジュールの子要素に付けるクラス名はわかりやすいものにする。<br>もし、クラス名指定に迷ったら下記のクラス名を積極的に利用する。  
+
+</p>
+<pre class="brush:html">
+hoge__body
+hoge__area
+hoge__item
+hoge__thumb
+hoge__img
+hoge__title
+hoge__txt
+hoge__num
+hoge__lnk
+</pre>
+
+
+
+<h2>フォント</h2>
+<h3>概要</h3>
+<p><strong> このサイトではフォントサイズをpx指定しています。</strong><br>デフォルトフォントは14pxを基準 (bodyに<strong>font-size: 14px</strong>を指定) としています。<br>文字サイズはpx固定ですが、文字数が増えたり、文字サイズが大きくなったりしても、<br>文字がコンテンツ領域に収まるように考慮して、マークアップをしてください。  
+
+</p>
+<h3>font-family</h3>
+<pre class="brush:css">
+fontFamily : &quot;メイリオ&quot;,Meiryo,&quot;ＭＳ Ｐゴシック&quot;,&quot;ヒラギノ角ゴ Pro W3&quot;,&quot;Hiragino Kaku Gothic Pro&quot;,sans-serif;
+</pre>
+
+
+
+
+
+
+
+<h2>ディレクトリ構成 <em class="REQ">※必須</em></h2>
+<p>このサイトのディレクトリ構成です。  
+
+</p>
+<pre class="brush:css">
+───────────────────────────────────────────────────────────────
+ディレクトリ構成
+───────────────────────────────────────────────────────────────
+the_previews
+├ _grunt
+│ ├ _KSS-STYLE-GUIDE
+│ ├ _styleguide
+│ ├ node_modules
+│ ├ gruntfile.js
+│ └ package.json
+├ admin
+│ ├ basic
+│ │ └ index.php
+│ ├ category
+│ │ └ index.php
+│ ├ login
+│ │ └ index.php
+│ ├ logout
+│ │ └ index.php
+│ └ uploader
+│    ├ assets
+│    │ ├ css
+│    │ │ └ style.css
+│    │ └ js
+│    │    ├ jquery.fileupload.js
+│    │    ├ jquery.iframe-transport.js
+│    │    ├ jquery.knob.js
+│    │    ├ jquery.ui.widget.js
+│    │    └ script.js
+│    ├ index.php
+│    └ upload.php
+├ api
+│ ├ add.php
+│ ├ delete.php
+│ ├ delete_category.php
+│ ├ download.php
+│ ├ get_category_data.php
+│ ├ get_config_data.php
+│ ├ getdirtree.php
+│ ├ make_thumbnail.php
+│ ├ rename.php
+│ ├ set_thumbnail.php
+│ ├ zip.download.php
+│ └ zip.lib.php
+├ data
+│ ├ img
+│ ├ thumbnail
+│ ├ category.csv
+│ ├ config.csv
+│ └ db.csv
+├ lib
+│ ├ css
+│ │ ├ jquery.powertip.css
+│ │ └ style.css
+│ ├ img
+│ ├ js
+│ │ ├ admin
+│ │ │ └ function.js
+│ │ ├ function
+│ │ │ ├ addStar.js
+│ │ │ ├ Database.js
+│ │ │ ├ deleteArray.js
+│ │ │ ├ function.js
+│ │ │ ├ getAllUrlParm.js
+│ │ │ ├ getHashData.js
+│ │ │ ├ getNowDate.js
+│ │ │ ├ init.js
+│ │ │ ├ intro.js
+│ │ │ ├ meta.js
+│ │ │ ├ outro.js
+│ │ │ ├ setHeightLineGroup.js
+│ │ │ ├ setImgViewDownloadBtn.js
+│ │ │ ├ setMainViewDownloadBtn.js
+│ │ │ ├ setMainViewImgListItem.js
+│ │ │ └ setMainViewRenameBtn.js
+│ │ ├ vendor
+│ │ │ ├ jquery.powertip.min.js
+│ │ │ ├ jquery-2.0.3.min.js
+│ │ │ ├ jquery-easing.js
+│ │ │ └ jquery-mousescroll.js
+│ │ └ app.min.js
+│ ├ sass
+│ │ ├ _core
+│ │ │ ├ function
+│ │ │ ├ mixin
+│ │ │ ├ placeholder
+│ │ │ ├ reset
+│ │ │ ├ vendor
+│ │ │ └ _core.scss
+│ │ ├ _the_previews
+│ │ ├ _config.scss
+│ │ ├ README.md
+│ │ ├ style.scss
+│ │ └ styleguide.md
+│ ├ compass_start.bat
+│ ├ compass_start.command
+│ └ config.rb
+├ v
+│ └ index.php
+├ config.php
+└ index.php
+
+</pre>
+
+
+
+
+<h2>ガイドラインについて</h2>
+<p>このガイドラインは、KSSによって作成されています。
+KSSについてはこちらをご覧ください。  
+
+</p>
+<blockquote>
+<p>Grunt KSS<br><a href="http://qiita.com/t32k/items/9e03e80061de21411765">http://qiita.com/t32k/items/9e03e80061de21411765</a>
+
+</p>
+<p>GitHub CSS Styleguide<br><a href="https://github.com/styleguide/css">https://github.com/styleguide/css</a>
+
+</p>
+<p>スタイルガイドジェネレータの KSS が良さそう<br><a href="http://text.ykhs.org/2013/01/06/kss.html">http://text.ykhs.org/2013/01/06/kss.html</a>
+
+</p>
+<p>KSS SYNTAX<br><a href="http://warpspire.com/kss/syntax/">http://warpspire.com/kss/syntax/</a>
+
+
+</p>
+</blockquote>
+<p>KSSでは、CSS(.css, .scss) 内で下記の様にコメントを記載することで、<br>スタイルガイドラインが自動生成されます。
+
+</p>
+<pre class="brush:html">
+// {このスタイルの説明}
+//
+// .class名       - {マルチクラスによるスタイルパターンの説明}
+//
+// Styleguide {スタイルガイドのセクション番号}
+
+.class{
+  ...
+  &amp;.class--color1{
+    ...
+  }
+  &amp;.class--color2{
+    ...
+  }
+}
+</pre>
+
+
+
+<h3>参考文献</h3>
+<p>下記のガイドラインを参考。
+
+</p>
+<blockquote>
+<p>＜CSS-Guidelines＞<br><a href="https://github.com/kiwanami/CSS-Guidelines/blob/master/README.ja.md">https://github.com/kiwanami/CSS-Guidelines/blob/master/README.ja.md</a>
+
+</p>
+<p>＜ぼくのかんがえたさいきょうのしーえしゅえしゅ － MOL＞<br><a href="https://github.com/kiwanami/CSS-Guidelines/blob/master/README.ja.md">https://github.com/kiwanami/CSS-Guidelines/blob/master/README.ja.md</a>
+
+</p>
+<p>＜メンテナブルCSS | 株式会社サイバーエージェント＞<br><a href="http://www.cyberagent.co.jp/recruit/techreport/report/id=7926">http://www.cyberagent.co.jp/recruit/techreport/report/id=7926</a>
+
+</p>
+<p>＜「Google HTML/CSS Style Guide」を適当に和訳してみた＞<br><a href="http://re-dzine.net/2012/05/google-htmlcss-style-guide/">http://re-dzine.net/2012/05/google-htmlcss-style-guide/</a>
+
+
+</p>
+</blockquote>
+<h3>参考ツール</h3>
+<p>CSS記述の際に参考になるサイト。
+
+</p>
+<blockquote>
+<p>＜W3c - CSS Validation Service＞<br><a href="http://jigsaw.w3.org/css-validator/">http://jigsaw.w3.org/css-validator/</a>
+
+</p>
+<p>＜Can I use...＞<br><a href="http://caniuse.com/">http://caniuse.com/</a>
+
+
+
+
+</p>
+</blockquote>
+
+			
+		</article>
+	</div>
+	<footer>
+		
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var sidebarAdjust = function() {
+				// Match footer/body height
+				var height = Math.max($(window).height(), $('#kss-main').height());
+
+				if ($(window).width() <= 768) {
+					$('#kss-main, #kss-nav').height('auto');
+				} else {
+					$('#kss-main, #kss-nav').height(height);
+				}
+			};
+
+			$(window).resize(sidebarAdjust);
+			$(window).scroll(sidebarAdjust);
+			sidebarAdjust();
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+
+		});
+	</script>
+
+	<!-- SyntaxHighlighter -->
+	<script src="public/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushCss.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+	<script>
+		SyntaxHighlighter.config.clipboardSwf = 'public/SyntaxHighlighter/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+
+</div>
+</body>
+</html>

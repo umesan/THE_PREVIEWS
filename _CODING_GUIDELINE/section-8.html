@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>THE PREVIEW - 制作ガイドライン</title>
+<meta name="description" content="">
+<meta name="generator" content="kss-node">
+<meta name="viewport" content="width=device-width">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+
+
+<!-- Your SITE STYLE SEET -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="../lib/css/style.v01.css">
+
+
+<!-- KSS Template -->
+<link rel="stylesheet" href="public/kss.css">
+
+<!-- SyntaxHighlighter -->
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCore.css">
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCoreRDark.css">
+
+</head>
+<body><div id="kss-wrapper">
+	<div id="kss-nav">
+		<header id="kss-header">
+			<h1>THE PREVIEW</h1>
+		</header>
+		<aside>
+			<nav><ul>
+				<li><a href="index.html">0: TOP</a></li>
+				
+					<li><a href="section-1.html">1.0: Header Module</a></li>
+				
+					<li><a href="section-2.html">2.0: Btn Module</a></li>
+				
+					<li><a href="section-3.html">3.0: Box Module</a></li>
+				
+					<li><a href="section-4.html">4.0: Alert Module</a></li>
+				
+					<li><a href="section-5.html">5.0: Modal Module</a></li>
+				
+					<li><a href="section-6.html">6.0: Menu Module</a></li>
+				
+					<li><a href="section-7.html">7.0: Title Module</a></li>
+				
+					<li><a href="section-8.html">8.0: Vis List Module</a></li>
+				
+					<li><a href="section-9.html">9.0: Upload Module</a></li>
+				
+					<li><a href="section-10.html">10.0: TextArea Module</a></li>
+				
+					<li><a href="section-11.html">11.0: Login Module</a></li>
+				
+					<li><a href="section-12.html">12.0: Visual Module</a></li>
+				
+					<li><a href="section-13.html">13.0: Table Module</a></li>
+				
+					<li><a href="section-14.html">14.0: Autoscroll Module</a></li>
+				
+			</ul></nav>
+		</aside>
+	</div>
+	<div role="main" id="kss-main">
+		<article id="kss-content">
+			
+
+				
+				
+					
+						<h1 class="kss-title"><span class="kss-ref">8.0</span> - Vis List Module</h1>
+					
+						
+								
+						
+					 
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">8.1</span> - Vis List Module</div>
+					
+						
+
+								
+								<div class="kss-description"><p>画像リスト（サムネイル小） モジュール</p>
+</div>
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;ul class=&quot;m-imglist o-show o-cfx&quot;&gt;
+	&lt;li class=&quot;imglist__item o-cfx&quot; data-itemid=&quot;xxxxxx&quot;&gt;
+		&lt;p class=&quot;imglist__ckbox&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;deletefile[]&quot; value=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;imglist__vis&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://dummyimage.com/142x100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+		&lt;div class=&quot;imglist__txt&quot;&gt;
+			&lt;p class=&quot;imglist__date&quot;&gt;&lt;i class=&quot;fa fa-calendar-o&quot;&gt;&lt;/i&gt; xx年xx月xx日&lt;/p&gt;
+			&lt;p class=&quot;imglist__tit&quot;&gt;
+				&lt;span class=&quot;imglist__filename&quot;&gt;xxxxxx.jpg&lt;/span&gt;
+			&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;imglist__status m-status&quot;&gt;
+			&lt;p id=&quot;status_short-txt_xxxxxx&quot; class=&quot;status__short-txt&quot;&gt;XXXXXXXXXX&lt;/p&gt;
+			&lt;div class=&quot;status__frm&quot;&gt;
+				&lt;div class=&quot;status__txt&quot;&gt;
+					&lt;div id=&quot;status_xxxxxx&quot; class=&quot;status__textarea&quot;&gt;XXXXXXXXXX&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<ul class="m-imglist o-show o-cfx">
+	<li class="imglist__item o-cfx" data-itemid="xxxxxx">
+		<p class="imglist__ckbox"><input type="checkbox" name="deletefile[]" value=""></p>
+		<p class="imglist__vis"><a href="#" target="_blank"><img src="http://dummyimage.com/142x100"></a></p>
+		<div class="imglist__txt">
+			<p class="imglist__date"><i class="fa fa-calendar-o"></i> xx年xx月xx日</p>
+			<p class="imglist__tit">
+				<span class="imglist__filename">xxxxxx.jpg</span>
+			</p>
+		</div>
+		<div class="imglist__status m-status">
+			<p id="status_short-txt_xxxxxx" class="status__short-txt">XXXXXXXXXX</p>
+			<div class="status__frm">
+				<div class="status__txt">
+					<div id="status_xxxxxx" class="status__textarea">XXXXXXXXXX</div>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;ul class=&quot;m-imglist o-show o-cfx&quot;&gt;
+	&lt;li class=&quot;imglist__item o-cfx&quot; data-itemid=&quot;xxxxxx&quot;&gt;
+		&lt;p class=&quot;imglist__ckbox&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;deletefile[]&quot; value=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;imglist__vis&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://dummyimage.com/142x100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+		&lt;div class=&quot;imglist__txt&quot;&gt;
+			&lt;p class=&quot;imglist__date&quot;&gt;&lt;i class=&quot;fa fa-calendar-o&quot;&gt;&lt;/i&gt; xx年xx月xx日&lt;/p&gt;
+			&lt;p class=&quot;imglist__tit&quot;&gt;
+				&lt;span class=&quot;imglist__filename&quot;&gt;xxxxxx.jpg&lt;/span&gt;
+			&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;imglist__status m-status&quot;&gt;
+			&lt;p id=&quot;status_short-txt_xxxxxx&quot; class=&quot;status__short-txt&quot;&gt;XXXXXXXXXX&lt;/p&gt;
+			&lt;div class=&quot;status__frm&quot;&gt;
+				&lt;div class=&quot;status__txt&quot;&gt;
+					&lt;div id=&quot;status_xxxxxx&quot; class=&quot;status__textarea&quot;&gt;XXXXXXXXXX&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+								</div>
+ -->
+
+								
+
+
+						
+					
+						</section>
+					
+				
+					
+					 <section class="kss-depth kss-depth-2">
+						<div class="kss-depth-title"><span class="kss-ref">8.2</span> - Vis List Module</div>
+					
+						
+
+								
+								<div class="kss-description"><p>画像リスト（リスト型） モジュール</p>
+</div>
+								
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">&lt;div class=&quot;noimg&quot;&gt;
+	&lt;ul class=&quot;m-imglist o-show o-cfx&quot;&gt;
+		&lt;li class=&quot;imglist__item o-cfx&quot; data-itemid=&quot;xxxxxx&quot;&gt;
+			&lt;p class=&quot;imglist__ckbox&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;deletefile[]&quot; value=&quot;&quot;&gt;&lt;/p&gt;
+			&lt;p class=&quot;imglist__vis&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://dummyimage.com/142x100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+			&lt;div class=&quot;imglist__txt&quot;&gt;
+				&lt;p class=&quot;imglist__date&quot;&gt;&lt;i class=&quot;fa fa-calendar-o&quot;&gt;&lt;/i&gt; xx年xx月xx日&lt;/p&gt;
+				&lt;p class=&quot;imglist__tit&quot;&gt;
+					&lt;span class=&quot;imglist__filename&quot;&gt;xxxxxx.jpg&lt;/span&gt;
+				&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;imglist__status m-status&quot;&gt;
+				&lt;p id=&quot;status_short-txt_xxxxxx&quot; class=&quot;status__short-txt&quot;&gt;XXXXXXXXXX&lt;/p&gt;
+				&lt;div class=&quot;status__frm&quot;&gt;
+					&lt;div class=&quot;status__txt&quot;&gt;
+						&lt;div id=&quot;status_xxxxxx&quot; class=&quot;status__textarea&quot;&gt;XXXXXXXXXX&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									<div class="noimg">
+	<ul class="m-imglist o-show o-cfx">
+		<li class="imglist__item o-cfx" data-itemid="xxxxxx">
+			<p class="imglist__ckbox"><input type="checkbox" name="deletefile[]" value=""></p>
+			<p class="imglist__vis"><a href="#" target="_blank"><img src="http://dummyimage.com/142x100"></a></p>
+			<div class="imglist__txt">
+				<p class="imglist__date"><i class="fa fa-calendar-o"></i> xx年xx月xx日</p>
+				<p class="imglist__tit">
+					<span class="imglist__filename">xxxxxx.jpg</span>
+				</p>
+			</div>
+			<div class="imglist__status m-status">
+				<p id="status_short-txt_xxxxxx" class="status__short-txt">XXXXXXXXXX</p>
+				<div class="status__frm">
+					<div class="status__txt">
+						<div id="status_xxxxxx" class="status__textarea">XXXXXXXXXX</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+&lt;div class=&quot;noimg&quot;&gt;
+	&lt;ul class=&quot;m-imglist o-show o-cfx&quot;&gt;
+		&lt;li class=&quot;imglist__item o-cfx&quot; data-itemid=&quot;xxxxxx&quot;&gt;
+			&lt;p class=&quot;imglist__ckbox&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;deletefile[]&quot; value=&quot;&quot;&gt;&lt;/p&gt;
+			&lt;p class=&quot;imglist__vis&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://dummyimage.com/142x100&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+			&lt;div class=&quot;imglist__txt&quot;&gt;
+				&lt;p class=&quot;imglist__date&quot;&gt;&lt;i class=&quot;fa fa-calendar-o&quot;&gt;&lt;/i&gt; xx年xx月xx日&lt;/p&gt;
+				&lt;p class=&quot;imglist__tit&quot;&gt;
+					&lt;span class=&quot;imglist__filename&quot;&gt;xxxxxx.jpg&lt;/span&gt;
+				&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;imglist__status m-status&quot;&gt;
+				&lt;p id=&quot;status_short-txt_xxxxxx&quot; class=&quot;status__short-txt&quot;&gt;XXXXXXXXXX&lt;/p&gt;
+				&lt;div class=&quot;status__frm&quot;&gt;
+					&lt;div class=&quot;status__txt&quot;&gt;
+						&lt;div id=&quot;status_xxxxxx&quot; class=&quot;status__textarea&quot;&gt;XXXXXXXXXX&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+								</div>
+ -->
+
+								
+
+
+						
+					
+						</section>
+					
+				
+			
+		</article>
+	</div>
+	<footer>
+		
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var sidebarAdjust = function() {
+				// Match footer/body height
+				var height = Math.max($(window).height(), $('#kss-main').height());
+
+				if ($(window).width() <= 768) {
+					$('#kss-main, #kss-nav').height('auto');
+				} else {
+					$('#kss-main, #kss-nav').height(height);
+				}
+			};
+
+			$(window).resize(sidebarAdjust);
+			$(window).scroll(sidebarAdjust);
+			sidebarAdjust();
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+
+		});
+	</script>
+
+	<!-- SyntaxHighlighter -->
+	<script src="public/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushCss.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+	<script>
+		SyntaxHighlighter.config.clipboardSwf = 'public/SyntaxHighlighter/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+
+</div>
+</body>
+</html>

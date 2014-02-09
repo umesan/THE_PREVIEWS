@@ -1,0 +1,66 @@
+@charset "utf-8";
+// ======================================================================
+
+// Alert Module
+// 
+// Styleguide 4
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Alert Module
+// 
+// アラートモジュール
+//
+// Markup:
+// <div class="m-alert {$modifiers}">TEXT</div>
+//
+// alert--compleate - その他  
+// alert--error - 成功  
+//
+// Styleguide 4.1
+
+//-----------------------------------------------------------------------
+
+$m-alert: false !default;
+@mixin m-alert() {
+	@if $m-alert {}
+	@else {
+		$m-alert: true;
+
+.alert--fix{
+	display: none;
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	z-index: 1200;
+	margin: 0 0 0 -250px;
+}
+
+.m-alert{
+	width: 500px;
+	padding: 15px 0;
+	@include box-sizing(border-box);
+	@include box-shadow(0 2px 2px -1px rgba(0,0,0,.1));
+
+	text-align: center;
+	font-size: 18px;
+	color: #333;
+	background-color: #eee;
+	border: 2px solid #ccc;
+}
+
+	.alert--compleate{
+		color: #333;
+		background-color: #fefce0;
+		border: 2px solid #fff6a9;
+	}
+	.alert--error{
+		color: #ffffff;
+		border: 2px solid #E83A22;
+		background-color: #e74c3c;
+	}
+
+	}
+}

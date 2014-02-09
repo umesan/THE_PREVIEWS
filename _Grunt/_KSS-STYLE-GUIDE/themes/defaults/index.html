@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ja"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="ja"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>THE PREVIEW - 制作ガイドライン</title>
+<meta name="description" content="">
+<meta name="generator" content="kss-node">
+<meta name="viewport" content="width=device-width">
+<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+
+{{#if overview}}
+<!-- MarkDown Style -->
+<link rel="stylesheet" href="public/kss_markdown.css">
+
+{{else}}
+<!-- Your SITE STYLE SEET -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="../lib/css/style.v01.css">
+{{/if}}
+
+<!-- KSS Template -->
+<link rel="stylesheet" href="public/kss.css">
+
+<!-- SyntaxHighlighter -->
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCore.css">
+<link rel="stylesheet" href="public/SyntaxHighlighter/styles/shCoreRDark.css">
+
+</head>
+<body><div id="kss-wrapper">
+	<div id="kss-nav">
+		<header id="kss-header">
+			<h1>THE PREVIEW</h1>
+		</header>
+		<aside>
+			<nav><ul>
+				<li><a href="index.html">0: TOP</a></li>
+				{{#eachRoot}}
+					<li><a href="section-{{reference}}.html">{{reference}}.0: {{header}}</a></li>
+				{{/eachRoot}}
+			</ul></nav>
+		</aside>
+	</div>
+	<div role="main" id="kss-main">
+		<article id="kss-content">
+			{{#if overview}}
+				{{html overview}}
+			{{else}}
+
+				{{!
+					Find each section, in order.
+					If there's no markup or modifiers supplied, use a Markdown-only
+					layout instead.
+
+					The "root" element comes first in this loop, and can be detected using
+					the "#whenDepth 1" block as seen below.
+				}}
+				{{#eachSection rootNumber}}
+					{{#whenDepth 1}}
+						<h1 class="kss-title"><span class="kss-ref">{{ reference }}.0</span> - {{ header }}</h1>
+					{{else}}
+					 <section class="kss-depth kss-depth-{{ refDepth }}">
+						<div class="kss-depth-title"><span class="kss-ref">{{ reference }}</span> - {{ header }}</div>
+					{{/whenDepth}}
+						{{#ifAny markup modifiers}}
+
+								{{#if description}}
+								<div class="kss-description">{{html description}}</div>
+								{{/if}}
+
+								<div class="kss-markup">
+									<pre class="prettyprint lang-html">{{markup}}</pre>
+								</div>
+
+								<div class="kss-mod-element">
+									{{modifierMarkup}}
+								</div>
+
+<!-- 
+								<div class="kss-markup">
+<pre class="brush:html">
+{{markup}}
+</pre>
+								</div>
+ -->
+
+								{{#if modifiers}}
+								{{#eachModifier}}
+
+									<div class="kss-mod-element kss-mod-element-modifer">
+										<div class="kss-mod-desc-group">
+
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p> + addClass</p></dt>
+												<dd class="kss-mod-frm-txt"><p>{{name}}</p></dd>
+											</dl>
+<!--
+											{{#if description}}
+											<dl class="kss-mod-frm">
+												<dt class="kss-mod-frm-tit"><p>Info</p></dt>
+												<dd class="kss-mod-frm-txt"><p>{{html description}}</p></dd>
+											</dl>
+											{{/if}}
+-->
+										</div>
+
+
+										{{modifierMarkup}}
+									</div>
+
+								{{/eachModifier}}
+								{{/if}}
+
+
+						{{else}}
+								{{#if description}}
+									{{html description}}
+								{{/if}}
+						{{/ifAny}}
+					{{#whenDepth 1}} {{else}}
+						</section>
+					{{/whenDepth}}
+				{{/eachSection}}
+			{{/if}}
+		</article>
+	</div>
+	<footer>
+		{{#if argv.xdemo}}<a href="http://github.com/hughsk/kss-node"><img id="kss-github" style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>{{/if}}
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="public/kss.js"></script>
+	<script src="public/prettify.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var sidebarAdjust = function() {
+				// Match footer/body height
+				var height = Math.max($(window).height(), $('#kss-main').height());
+
+				if ($(window).width() <= 768) {
+					$('#kss-main, #kss-nav').height('auto');
+				} else {
+					$('#kss-main, #kss-nav').height(height);
+				}
+			};
+
+			$(window).resize(sidebarAdjust);
+			$(window).scroll(sidebarAdjust);
+			sidebarAdjust();
+
+			// Ensure code blocks are highlighted properly...
+			$('pre>code').addClass('prettyprint');
+			prettyPrint();
+
+		});
+	</script>
+
+	<!-- SyntaxHighlighter -->
+	<script src="public/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushCss.js"></script>
+	<script src="public/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+	<script>
+		SyntaxHighlighter.config.clipboardSwf = 'public/SyntaxHighlighter/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+
+</div>
+</body>
+</html>

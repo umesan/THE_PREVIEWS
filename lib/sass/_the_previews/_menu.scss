@@ -1,0 +1,74 @@
+@charset "utf-8";
+// ======================================================================
+
+// Menu Module
+// 
+// Styleguide 6
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Menu Module
+// 
+// メニュー モジュールです。
+//
+// Markup:
+// <nav class="m-menu">
+// 	<p class="menu__btn01"><a href="#" class="m-btn02 btn02--upload">画像投稿</a></p>
+// 	<ul class="menu__btnset">
+// 	<li class="menu__btn"><a href="#">基本情報登録</a></li>
+// 	<li class="menu__btn menu__btn--active"><a href="#">カテゴリ登録</a></li>
+// 	</ul>
+// </nav>
+//
+// Styleguide 6.1
+
+//-----------------------------------------------------------------------
+
+$m-menu: false !default;
+@mixin m-menu() {
+	@if $m-menu {}
+	@else {
+		$m-menu: true;
+
+.m-menu{
+	width: 180px;
+	font-size: 12px;
+}
+	.m-menu--fixed{
+		position: fixed;
+		top: 110px;
+		left: 0;
+	}
+
+	.menu__btn01{
+		margin: 0 0 20px 20px;
+	}
+
+	.menu__btn a{
+		width: 180px;
+		padding: 10px 10px 10px 40px;
+		color: #333;
+		display: block;
+		text-decoration: none;
+		-webkit-box-sizing:border-box;
+		-mozbox-sizing:border-box;
+		box-sizing:border-box;
+		background-color: #fff;
+		border-top: 1px solid #ededed;
+
+		&:hover{
+			background: #e5e5e5;
+		}
+	}
+		.menu__btn--active a{
+			color: #D14836;
+			font-weight: bold;
+			padding-left: 35px;
+			border-left: 5px solid #D14836;
+		}
+
+
+	}
+}

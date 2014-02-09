@@ -1,0 +1,80 @@
+@charset "utf-8";
+// ======================================================================
+
+// Box Module
+// 
+// Styleguide 3
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// BoxModule
+// 
+// 説明用の文章を入れるモジュール
+//
+// Markup:
+//<div class="m-box {$modifiers}">
+//	<div class="box__tit">TITLE</div>
+//	<div class="box__txt">TEXT</div>
+//</div>
+//
+// box--blue - その他
+// box--green - 成功
+// box--yellow - 注意用
+//
+// Styleguide 3.1
+
+//-----------------------------------------------------------------------
+
+$m-box: false !default;
+@mixin m-box() {
+	@if $m-box {}
+	@else {
+		$m-box: true;
+
+		.m-box{
+			margin: 20px 0;
+			padding: 15px;
+			color: #fff;
+			background-color: #999999;
+		}
+			.box--blue{
+				background-color: #427fed;
+			}
+			.box--green{
+				background-color: #2ecc71;
+			}
+			.box--yellow{
+				background-color: #f1c40f;
+			}
+			.box__tit{
+				font-size: 16px;
+				color: #fff;
+			}
+			.box__tit + .box__txt{
+				margin-top: 10px;
+			}
+			.box__txt{
+				font-size: 14px;
+				font-weight: normal;
+				color: #666;
+				padding: 15px 20px;
+				background-color: #ffffff;
+				border-bottom: none;
+				li{
+					list-style-type: none;
+					float: none;
+					width: 100%;
+					margin-bottom: 15px;
+					&:last-child{
+						margin-bottom: 0;
+					}
+					p{
+						line-height: 1.5;
+					}
+				}
+			}
+
+	}
+}

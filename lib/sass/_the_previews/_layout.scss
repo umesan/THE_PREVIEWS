@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+$m-layout: false !default;
+@mixin m-layout() {
+	@if $m-layout {}
+	@else {
+		$m-layout: true;
+
+body{
+	width: 100%;
+	min-width: 980px;
+	background: #eff0f0;
+	&.mode-imgview{
+		overflow-x: auto;
+		min-width: 100%;
+		background-color: #fff;
+	}
+}
+
+// コンテンツ
+.m-contents{
+	min-height: 200px;
+	margin: 110px 30px 50px 0;
+	padding: 0 0 0 200px;
+	position: relative;
+}
+
+// Main Area
+.m-main{
+float: left;
+width: 100%;
+}
+.m-main--block01{
+margin-top: -41px;
+}
+
+.m-ctsbox{
+padding-bottom: 10px;
+}
+.ctsbox__wrap{
+	@include box-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+}
+
+.m-page{
+	position: relative;
+	padding: 0;
+}
+
+
+	}
+}

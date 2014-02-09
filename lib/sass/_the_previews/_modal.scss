@@ -1,0 +1,128 @@
+@charset "utf-8";
+// ======================================================================
+
+// Modal Module
+// 
+// Styleguide 5
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Modal Module
+// 
+// モーダル モジュールです。
+//
+// Markup:
+// <div class="modal01__box">
+// 	<p class="modal01__txt">選択したカテゴリを本当に削除しますか？</p>
+// 	<a href="#" class="m-btn03">キャンセル</a>
+// 	<a href="#" class="m-btn03 btn03--delete">削除</a>
+// </div>
+//
+// Styleguide 5.1
+
+//-----------------------------------------------------------------------
+
+$m-modal: false !default;
+@mixin m-modal() {
+	@if $m-modal {}
+	@else {
+		$m-modal: true;
+
+.modal01__bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(255,255,255,0.75);
+}
+
+	.modal01__box--fix{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: 1001;
+		margin: -75px 0 0 -225px;
+	}
+	.modal01__box--size01{
+		margin-top: -75px;
+	}
+	.modal01__box--size02{
+		margin-top: -200px;
+	}
+
+	.modal01__box{
+		padding: 35px 30px;
+		width: 450px;
+		text-align: center;
+		@include box-sizing(border-box);
+		@include box-shadow(0 2px 2px -1px rgba(0,0,0,.1));
+		background-color: #fff;
+		border: 1px solid #ccc;
+	}
+	.modal01__txt{
+		font-size: 20px;
+		padding-bottom: 20px;
+	}
+
+	.modal01__renamearea{
+		border: 1px solid #ccc;
+		width: 100%;
+		height: 200px;
+		padding: 0 10px;
+		@include box-sizing(border-box);
+		overflow: auto;
+	}
+
+	.m-rename__table{
+		display: table;
+		width: 100%;
+		border-bottom: 1px solid #eee;
+		font-size: 14px;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+		.rename__table-l{
+			display: table-cell;
+			vertical-align: middle;
+			width: 43%;
+			padding: 5px 0;
+			text-align: left;
+			@include ellipsis;
+		}
+		.rename__table-c{
+			display: table-cell;
+			vertical-align: middle;
+			width: 6%;
+			text-align: left;
+		}
+		.rename__table-r{
+			display: table-cell;
+			vertical-align: middle;
+			width: 43%;
+			padding: 5px 0;
+			text-align: left;
+			input{
+				width: 100%;
+				font-size: 14px;
+				border: 1px solid #ccc;
+				padding: 5px;
+				@include box-sizing(border-box);
+			}
+		}
+		.rename__table-ex{
+			display: table-cell;
+			vertical-align: middle;
+			width: 8%;
+			color: #666;
+			text-align: center;
+			font-size: 12px;
+		}
+
+
+	}
+}

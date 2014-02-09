@@ -1,0 +1,206 @@
+@charset "utf-8";
+// ======================================================================
+
+// Upload Module
+// 
+// Styleguide 9
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Upload Module
+// 
+// 画像Upload モジュール
+//
+// Markup:
+// <div class="m-upload">
+// 	<form class="upload__form" method="post" action="#" enctype="multipart/form-data">
+// 		<div class="upload__area">
+// 			<p class="upload__txt01"><i class="fa fa-lg fa-picture-o"></i><br>ここに画像をドラッグ</p>
+// 			<p class="upload__txt02">- または - </p>
+// 			<a class="upload__txt03">クリックして画像を選択</a>
+// 			<input class="upload__input" type="file" name="upl" multiple />
+// 		</div>
+//		<ul class="upload__list o-cfx">
+//			<li class="upload__item">
+//			<div class="loader">
+//			<img src="http://dummyimage.com/300x225" alt="">
+//			</div>
+//			<div class="info">
+//			<p>cat-017.jpg<i>54.06 KB</i></p>
+//			<span><i class="fa fa-lg fa-trash-o"></i></span></div>
+//			</li>
+//		</ul>
+// 	</form>
+// </div>
+//
+// Styleguide 9.1
+
+//-----------------------------------------------------------------------
+
+$m-upload: false !default;
+@mixin m-upload() {
+	@if $m-upload {}
+	@else {
+		$m-upload: true;
+
+
+.m-upload{
+	padding: 20px 0;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.upload__list{
+	margin: 0 20px;
+	list-style:none;
+}
+.upload__area{
+	margin: 0 20px 0 20px;
+	padding: 40px 20px;
+	text-align: center;
+	background-color:rgba(0,0,0,0.1);
+	border: dashed 1px #ccc;
+	color: #aaa;
+}
+.upload__txt01{
+	font-size: 26px;
+	font-weight: normal;
+	padding: 0;
+	i{
+		padding-bottom: 20px;
+	}
+}
+
+.upload__txt02{
+	padding: 10px 0 15px;
+}
+
+.upload__txt03{
+	background-color:#fff;
+	padding:12px 26px;
+	color:#404040;
+
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.05);
+	box-shadow: 0 1px 0 rgba(0,0,0,.05);
+
+	-webkit-transition: all .218s;
+	transition: all .218s;
+	border: 1px solid rgba(0,0,0,.15);
+
+	font-size:14px;
+	border-radius:2px;
+	cursor:pointer;
+	display:inline-block;
+	line-height:1;
+
+	&:hover{
+		-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
+		box-shadow: 0 1px 0 rgba(0,0,0,.1);
+		border: 1px solid #b8b8b8;
+	}
+
+}
+
+.upload__input{
+	display:none;
+}
+
+.upload__item{
+
+	position: relative;
+	margin: 2% 2% 0 0;
+	float: left;
+	width: 32%;
+	min-height: 100px;
+	border: 1px solid #d0d0d0;
+	@include border-radius(4px);
+	@include box-sizing(border-box);
+
+	&:nth-child(3n){
+		margin-right: 0;
+	}
+
+	input{
+		display: none;
+	}
+
+	.loader{
+		position: relative;
+		min-height: 100px;
+		text-align: center;
+		background-color: #eee;
+		line-height: 0;
+
+		img{
+			width: 100%;
+		}
+	}
+
+	.info{
+		position: relative;
+		text-align: left;
+		border-top: 1px #d0d0d0 solid;
+		cursor: default;
+		padding-right: 44px;
+		outline: none;
+	}
+
+	p{
+		@include ellipsis;
+		color: #666;
+		font-size: 12px;
+		font-weight: bold;
+		padding: 10px 0 10px 10px;
+	}
+
+	i{
+		font-weight: normal;
+		font-style:normal;
+		color:#7f7f7f;
+		display:block;
+		font-size: 10px;
+	}
+
+	canvas{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 24px;
+		height: 24px;
+		margin: -12px 0 0 -12px;
+	}
+
+	span{
+		position: absolute;
+		top: 50%;
+		right: 5px;
+		width: 32px;
+		height: 32px;
+		margin-top: -16px;
+		i{
+			font-size: 20px;
+			text-align: center;
+			line-height: 34px;
+		}
+		cursor:pointer;
+		&:hover{
+			background-color: #eee;
+		}
+	}
+
+	&.working span{
+		height: 16px;
+		background-position: 0 -12px;
+	}
+
+	&.error p{
+		color:red;
+	}
+}
+
+
+
+	}
+}
+

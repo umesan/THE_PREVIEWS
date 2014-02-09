@@ -1,0 +1,274 @@
+@charset "utf-8";
+// ======================================================================
+
+// Title Module
+// 
+// Styleguide 7
+
+// ======================================================================
+
+//-----------------------------------------------------------------------
+
+// Title Module
+// 
+// タイトル モジュールです。
+//
+// Markup:
+// <div class="m-headbar o-cfx">
+// 	<p class="headbar__date">日付</p>
+// 	<p class="headbar__link">日付に含まれる全ての画像を閲覧</p>
+// </div>
+// <div class="m-headbar o-cfx">
+// 	<p class="headbar__name">ページ名</p>
+// 	<p class="headbar__id">ID</p>
+// 	<p class="headbar__html">HTML</p>
+// 	<p class="headbar__link">ページに含まれる全ての画像を閲覧</p>
+// </div>
+//
+// Styleguide 7.1
+
+//-----------------------------------------------------------------------
+
+$m-headbar: false !default;
+@mixin m-headbar() {
+	@if $m-headbar {}
+	@else {
+		$m-headbar: true;
+
+.m-headbar{
+	color: #666;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 10px;
+	border-bottom: 1px solid #ebebeb;
+	text-align: center;
+	background: #f5f5f5;
+}
+.headbar__date{
+	float: left;
+	width: 60px;
+}
+.headbar__link{
+	float: right;
+	width: 180px;
+}
+.headbar__name{
+	float: left;
+	width: 255px;
+}
+.headbar__id{
+	float: left;
+	width: 77px;
+}
+.headbar__html{
+	float: left;
+	width: 60px;
+	text-align: center;
+}
+
+	}
+}
+
+
+
+
+
+//-----------------------------------------------------------------------
+
+// Title Module2
+// 
+// タイトル モジュール2です。
+//
+// Markup:
+//<h3 class="m-ttl01 {$modifiers}">
+//<span class="ttl01__ckbox"><input type="checkbox"></span>
+//<i class="fa fa-folder-o"></i>
+//<span class="ttl01__t">title</span> 
+//<span class="ttl01__link">全ての画像を閲覧（2画像）</span>
+//</h3>
+//
+// disabled -  
+// open - 
+//
+// Styleguide 7.2
+
+//-----------------------------------------------------------------------
+
+$m-ttl01: false !default;
+@mixin m-ttl01() {
+	@if $m-ttl01 {}
+	@else {
+		$m-ttl01: true;
+
+.noimg{
+	.m-ttl01{
+		border-left: none;
+	}
+}
+
+.m-ttl01{
+	position: relative;
+	font-size: 14px;
+	line-height: 1.2;
+	margin: 0;
+	padding: 15px 5px 10px 60px;
+	border-left: none;
+	border-bottom: 1px solid #e5e5e5;
+	@include box-sizing(border-box);
+	background-color: #fff;
+
+	&:hover{
+		background: #ffc;
+	}
+
+	.fa-folder-o{
+		position: absolute;
+		top: 15px;
+		left: 40px;
+	}
+
+	.ttl01__ckbox{
+		position: absolute;
+		top: 14px;
+		left: 12px;
+		input{
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.ttl01__t{
+		cursor: pointer;
+		display:inline-block;
+		width: 200px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.ttl01__prefix{
+		display:inline-block;
+		width: 77px;
+		margin-left: 5px;
+		padding: 2px 0;
+		text-align: center;
+		background: #dddddd;
+		font-size: 11px;
+		color: #666;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.ttl01__site{
+		display:inline-block;
+		width: 60px;
+		padding: 0;
+		text-align: center;
+		font-size: 11px;
+		line-height: 1;
+		color: #666;
+		a{
+			display:inline-block;
+			width: 60px;
+			color: #538DF1;
+		}
+	}
+
+	.ttl01__link{
+		cursor: pointer;
+		display: inline-block;
+		font-weight: normal;
+		font-size: 12px;
+		float: right;
+		padding: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding-left: 24px;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	&.disabled,
+	&.disabled:hover{
+		background-color: rgba(243,243,243,.85);
+		.ttl01__t:hover,
+		.ttl01__link:hover{
+			text-decoration: none;
+			cursor: default;
+		}
+		.ttl01__ckbox{
+			display: none;
+		}
+	}
+
+	&.o-show{
+		background: #222;
+		background: #222932;
+		color: #fff;
+
+		.ttl01__prefix{
+			background: none;
+			color: #fff;
+		}
+		.ttl01__site a{
+			color: #fff;
+		}
+
+		.fa-folder-o:before{
+			content:"\f115";
+		}
+
+	}
+
+}
+
+
+	}
+}
+
+
+
+
+
+
+//-----------------------------------------------------------------------
+
+// Title Module3
+// 
+// タイトル モジュール3です。
+//
+// Markup:
+//<h2 class="m-ttl02">Title</h2>
+//
+// Styleguide 7.3
+
+//-----------------------------------------------------------------------
+
+$m-ttl02: false !default;
+@mixin m-ttl02() {
+	@if $m-ttl02 {}
+	@else {
+		$m-ttl02: true;
+
+.m-ttl02{
+	line-height: 1.5;
+	color: #333;
+	margin: 0 0 10px 0;
+	padding: 0 0 .2em;
+	font-size: 24px;
+	color: #333;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #222932;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+
+	}
+}
